@@ -1,0 +1,39 @@
+{
+  "name": "pocketdev",
+  "version": "1.0.0",
+  "description": "Semantic Web App for IT jobs",
+  "main": "index.js",
+  "directories": {
+    "doc": "doc"
+  },
+  "scripts": {
+    "start": "nodemon index.js",
+    "fuseki-create": "sudo docker run --name pocketdev -p 3030:3030 stain/jena-fuseki",
+    "fuseki-start": "sudo docker container start pocketdev",
+    "fuseki-stop": "sudo docker container stop pocketdev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/didacusabella/PocketDev.git"
+  },
+  "keywords": [
+    "RDF",
+    "SPARQL",
+    "Node",
+    "Javascript",
+    "Fuseki"
+  ],
+  "author": "Diego Avella, Francesco Vicidomini",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/didacusabella/PocketDev/issues"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "sparql-client-2": "^0.6.3"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.1"
+  },
+  "homepage": "https://github.com/didacusabella/PocketDev#readme"
+}
