@@ -1,0 +1,22 @@
+{
+    "pd": "http://www.semanticweb.org/pocketdev#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "dct": "http://purl.org/dc/terms/",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "isbd": "http://iflastandards.info/ns/isbd/elements/",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "bibo": "http://purl.org/ontology/bibo/",
+    "rda": "http://RDVocab.info/ElementsGr2/", 
+    "blt": "http://data.bl.uk/schema/bibliographic#",
+    "bio": "http://purl.org/vocab/bio/0.1/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "event": "http://purl.org/NET/c4dm/event.owl#",
+    "org": "http://www.w3.org/ns/org#",
+    "geo": "http://www.w3.org/2003/01/geo/wgs84_pos#",
+    "hxl": "http://hxl.humanitarianresponse.info/ns/#",
+    "dbo": "http://dbpedia.org/ontology/",
+    "dbr": "http://dbpedia.org/resource/",
+    "dbp": "http://dbpedia.org/property/"
+}
