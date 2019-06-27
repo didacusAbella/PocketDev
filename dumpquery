@@ -1,0 +1,36 @@
+prefix xsd: <http://www.w3.org/2001/XMLSchema#> 
+prefix dct: <http://purl.org/dc/terms/> 
+prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+prefix owl: <http://www.w3.org/2002/07/owl#>
+prefix isbd: <http://iflastandards.info/ns/isbd/elements/> 
+prefix skos: <http://www.w3.org/2004/02/skos/core#> 
+prefix bibo: <http://purl.org/ontology/bibo/> 
+prefix rda: <http://RDVocab.info/ElementsGr2/> 
+prefix blt: <http://data.bl.uk/schema/bibliographic#> 
+prefix bio: <http://purl.org/vocab/bio/0.1/> 
+prefix foaf: <http://xmlns.com/foaf/0.1/> 
+prefix event: <http://purl.org/NET/c4dm/event.owl#>  
+prefix org: <http://www.w3.org/ns/org#> 
+prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> 
+prefix hxl: <http://hxl.humanitarianresponse.info/ns/#>
+prefix dbo: <http://dbpedia.org/ontology/>
+prefix dbr: <http://dbpedia.org/resource/>
+prefix dbp: <http://dbpedia.org/property/>
+
+# Seleziona lingguaggi in italiano
+SELECT DISTINCT ?pl ?abs WHERE { 
+  ?pl a dbo:ProgrammingLanguage .
+  ?pl dbo:abstract ?abs . 
+  FILTER(langMatches(lang(?abs), "it"))
+}
+# all languages
+SELECT DISTINCT ?pl ?pr WHERE { 
+  ?pl a dbo:ProgrammingLanguage .
+  ?pl dbp:paradigm ?pr .
+} GROUP BY ?pl
+
+# all jobs
+SELECT ?p ?o   WHERE { 
+  ?p dct:subject dbr:Category:Computer_occupations .
+} 
