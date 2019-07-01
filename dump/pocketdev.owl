@@ -1,13 +1,15 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="http://www.semanticweb.org/pocketdev#"
      xml:base="http://www.semanticweb.org/pocketdev"
+     xmlns:pd="http://www.semanticweb.org/pocketdev#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
     <owl:Ontology rdf:about="http://www.semanticweb.org/pocketdev">
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Onthology that describe IT jobs</rdfs:comment>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ontology for describe IT Career Roadmap</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PocketDev</rdfs:label>
     </owl:Ontology>
     
 
@@ -23,21 +25,12 @@
     
 
 
-    <!-- http://www.semanticweb.org/pocketdev#Begin -->
+    <!-- http://www.semanticweb.org/pocketdev#follow -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pocketdev#Begin">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/pocketdev#Carriera"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/pocketdev#Percorso_Formativo"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/pocketdev#Consult -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pocketdev#Consult">
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pocketdev#follow">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/pocketdev#Percorso_Formativo"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/pocketdev#Libri"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pocketdev#IT_Career"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/pocketdev#Educational_Path"/>
     </owl:ObjectProperty>
     
 
@@ -53,32 +46,22 @@
     
 
 
-    <!-- http://www.semanticweb.org/pocketdev#hasAuthor -->
+    <!-- http://www.semanticweb.org/pocketdev#hasBookApi -->
 
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/pocketdev#hasAuthor">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/pocketdev#hasBookApi">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pocketdev#Language"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">describe some api to fetch book for a specific language</rdfs:comment>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://www.semanticweb.org/pocketdev#hasDescription -->
+    <!-- http://www.semanticweb.org/pocketdev#hasGuide -->
 
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/pocketdev#hasDescription"/>
-    
-
-
-    <!-- http://www.semanticweb.org/pocketdev#hasName -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/pocketdev#hasName">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/pocketdev#hasTitle -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/pocketdev#hasTitle">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/pocketdev#hasGuide">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pocketdev#Language"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">url to scrape guide from wikibook</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -94,272 +77,58 @@
     
 
 
-    <!-- http://www.semanticweb.org/francescovicidomini/ontologies/2019/5/untitled-ontology-14#Framework -->
+    <!-- http://www.semanticweb.org/pocketdev#Educational_Path -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/francescovicidomini/ontologies/2019/5/untitled-ontology-14#Framework">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pocketdev#Pratico"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/pocketdev#Educational_Path"/>
+    
+
+
+    <!-- http://www.semanticweb.org/pocketdev#IT_Career -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/pocketdev#IT_Career">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IT_Career</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/francescovicidomini/ontologies/2019/5/untitled-ontology-14#Linguaggi -->
+    <!-- http://www.semanticweb.org/pocketdev#Language -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/francescovicidomini/ontologies/2019/5/untitled-ontology-14#Linguaggi">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pocketdev#Pratico"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/pocketdev#Language">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pocketdev#Practice_EducationalPath"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Programming Language</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/francescovicidomini/ontologies/2019/5/untitled-ontology-14#Strumenti -->
+    <!-- http://www.semanticweb.org/pocketdev#Library -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/francescovicidomini/ontologies/2019/5/untitled-ontology-14#Strumenti">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pocketdev#Pratico"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/pocketdev#Library">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pocketdev#Practice_EducationalPath"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/pocketdev#Carriera -->
+    <!-- http://www.semanticweb.org/pocketdev#Practice_EducationalPath -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/pocketdev#Carriera">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/pocketdev#Begin"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/pocketdev#Percorso_Formativo"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/pocketdev#hasDescription"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
+    <owl:Class rdf:about="http://www.semanticweb.org/pocketdev#Practice_EducationalPath">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pocketdev#Educational_Path"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/pocketdev#Theory_EducationalPath"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/pocketdev#Chief_networking_officer -->
+    <!-- http://www.semanticweb.org/pocketdev#Theory_EducationalPath -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/pocketdev#Chief_networking_officer">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pocketdev#Carriera"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/pocketdev#Theory_EducationalPath">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pocketdev#Educational_Path"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/pocketdev#Computer_repair_technician -->
+    <!-- http://www.semanticweb.org/pocketdev#Tool -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/pocketdev#Computer_repair_technician">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pocketdev#Carriera"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/pocketdev#Configuration_management -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/pocketdev#Configuration_management">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pocketdev#Carriera"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/pocketdev#Data_science -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/pocketdev#Data_science">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pocketdev#Carriera"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/pocketdev#Database_administrator -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/pocketdev#Database_administrator">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pocketdev#Carriera"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/pocketdev#Enterprise_architect -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/pocketdev#Enterprise_architect">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pocketdev#Carriera"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/pocketdev#Game_programmer -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/pocketdev#Game_programmer">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pocketdev#Carriera"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/pocketdev#Graphic_designer -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/pocketdev#Graphic_designer">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pocketdev#Carriera"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/pocketdev#Libri -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/pocketdev#Libri">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/pocketdev#hasAuthor"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/pocketdev#hasTitle"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/pocketdev#Network_administrator -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/pocketdev#Network_administrator">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pocketdev#Carriera"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/pocketdev#Percorso_Formativo -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/pocketdev#Percorso_Formativo">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/pocketdev#Consult"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/pocketdev#Libri"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/pocketdev#hasDescription"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/pocketdev#hasName"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/pocketdev#Pratico -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/pocketdev#Pratico">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pocketdev#Percorso_Formativo"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/pocketdev#hasAuthor"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <owl:disjointWith rdf:resource="http://www.semanticweb.org/pocketdev#Teorico"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/pocketdev#Programmer -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/pocketdev#Programmer">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pocketdev#Carriera"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/pocketdev#Project_manager -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/pocketdev#Project_manager">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pocketdev#Carriera"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/pocketdev#Security_hacker -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/pocketdev#Security_hacker">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pocketdev#Carriera"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/pocketdev#Software_analyst -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/pocketdev#Software_analyst">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pocketdev#Carriera"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/pocketdev#Software_engineer -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/pocketdev#Software_engineer">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pocketdev#Carriera"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/pocketdev#Software_quality_analyst -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/pocketdev#Software_quality_analyst">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pocketdev#Carriera"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/pocketdev#Software_testing -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/pocketdev#Software_testing">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pocketdev#Carriera"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/pocketdev#System_administrator -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/pocketdev#System_administrator">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pocketdev#Carriera"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/pocketdev#Systems_analyst -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/pocketdev#Systems_analyst">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pocketdev#Carriera"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/pocketdev#Systems_architect -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/pocketdev#Systems_architect">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pocketdev#Carriera"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/pocketdev#Teorico -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/pocketdev#Teorico">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pocketdev#Percorso_Formativo"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/pocketdev#Webmaster -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/pocketdev#Webmaster">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pocketdev#Carriera"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/pocketdev#Tool">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pocketdev#Practice_EducationalPath"/>
     </owl:Class>
     
 
@@ -367,43 +136,393 @@
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
-    // General axioms
+    // Individuals
     //
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://www.semanticweb.org/francescovicidomini/ontologies/2019/5/untitled-ontology-14#Framework"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/francescovicidomini/ontologies/2019/5/untitled-ontology-14#Linguaggi"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/francescovicidomini/ontologies/2019/5/untitled-ontology-14#Strumenti"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://www.semanticweb.org/pocketdev#Chief_networking_officer"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/pocketdev#Computer_repair_technician"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/pocketdev#Configuration_management"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/pocketdev#Data_science"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/pocketdev#Database_administrator"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/pocketdev#Enterprise_architect"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/pocketdev#Game_programmer"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/pocketdev#Graphic_designer"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/pocketdev#Network_administrator"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/pocketdev#Programmer"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/pocketdev#Project_manager"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/pocketdev#Security_hacker"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/pocketdev#Software_analyst"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/pocketdev#Software_engineer"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/pocketdev#Software_quality_analyst"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/pocketdev#Software_testing"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/pocketdev#System_administrator"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/pocketdev#Systems_analyst"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/pocketdev#Systems_architect"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/pocketdev#Webmaster"/>
-        </owl:members>
+    
+
+
+    <!-- http://dbpedia.org/resource/Cascading_Style_Sheets -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Cascading_Style_Sheets">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Language"/>
+        <hasBookApi rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://api.itbook.store/1.0/search/css</hasBookApi>
+        <hasGuide rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikibooks.org/wiki/Cascading_Style_Sheets</hasGuide>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Clojure -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Clojure">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Language"/>
+        <hasBookApi rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://api.itbook.store/1.0/search/clojure</hasBookApi>
+        <hasGuide rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikibooks.org/wiki/Clojure_Programming</hasGuide>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Data_janitor -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Data_janitor">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#IT_Career"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Database_administrator -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Database_administrator">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#IT_Career"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Fortran -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Fortran">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Language"/>
+        <hasGuide rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikibooks.org/wiki/Fortran</hasGuide>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Game_programmer -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Game_programmer">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#IT_Career"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Graphic_designer -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Graphic_designer">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#IT_Career"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/HTML5 -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/HTML5">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Language"/>
+        <hasBookApi rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://api.itbook.store/1.0/search/HTML5</hasBookApi>
+        <hasGuide rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikibooks.org/wiki/HyperText_Markup_Language</hasGuide>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/JavaScript -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/JavaScript">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Language"/>
+        <hasBookApi rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://api.itbook.store/1.0/search/JavaScript</hasBookApi>
+        <hasGuide rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikibooks.org/wiki/JavaScript</hasGuide>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/MATLAB -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/MATLAB">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Language"/>
+        <hasBookApi rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://api.itbook.store/1.0/search/MATLAB</hasBookApi>
+        <hasGuide rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikibooks.org/wiki/MATLAB_Programming</hasGuide>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Network_administrator -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Network_administrator">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#IT_Career"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Objective-C -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Objective-C">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Language"/>
+        <hasBookApi rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://api.itbook.store/1.0/search/Objective-C</hasBookApi>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/PHP -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/PHP">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Language"/>
+        <hasBookApi rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://api.itbook.store/1.0/search/PHP</hasBookApi>
+        <hasGuide rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikibooks.org/wiki/PHP_Programming</hasGuide>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Perl -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Perl">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Language"/>
+        <hasBookApi rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://api.itbook.store/1.0/search/Perl</hasBookApi>
+        <hasGuide rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikibooks.org/wiki/Perl_Programming</hasGuide>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Project_manager -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Project_manager">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#IT_Career"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/SQL -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/SQL">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Language"/>
+        <hasBookApi rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://api.itbook.store/1.0/search/SQL</hasBookApi>
+        <hasGuide rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikibooks.org/wiki/Structured_Query_Language</hasGuide>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Security_hacker -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Security_hacker">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#IT_Career"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Software_engineer -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Software_engineer">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#IT_Career"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Software_quality_analyst -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Software_quality_analyst">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#IT_Career"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Software_testing -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Software_testing">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Theory_EducationalPath"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Systems_architect -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Systems_architect">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#IT_Career"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Visual_Basic -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Visual_Basic">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Language"/>
+        <hasBookApi rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://api.itbook.store/1.0/search/visual Basic</hasBookApi>
+        <hasGuide rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikibooks.org/wiki/Visual_Basic</hasGuide>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/XML -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/XML">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Language"/>
+        <hasBookApi rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://api.itbook.store/1.0/search/XML</hasBookApi>
+        <hasGuide rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikibooks.org/wiki/XML_-_Managing_Data_Exchange</hasGuide>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/C++ -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/C++">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Language"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/C_(programming_language) -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/C_(programming_language)">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Language"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/C_Sharp_(programming_language) -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/C_Sharp_(programming_language)">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Language"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/D_(programming_language) -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/D_(programming_language)">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Language"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Dart_(programming_language) -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Dart_(programming_language)">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Language"/>
+        <hasBookApi rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://api.itbook.store/1.0/search/Dart</hasBookApi>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Elixir_(programming_language) -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Elixir_(programming_language)">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Language"/>
+        <hasBookApi rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://api.itbook.store/1.0/search/Elixir</hasBookApi>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Go_(programming_language) -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Go_(programming_language)">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Language"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Groovy_(programming_language) -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Groovy_(programming_language)">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Language"/>
+        <hasBookApi rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://api.itbook.store/1.0/search/Groovy</hasBookApi>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Haskell_(programming_language) -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Haskell_(programming_language)">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Language"/>
+        <hasBookApi rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://api.itbook.store/1.0/search/Haskell</hasBookApi>
+        <hasGuide rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikibooks.org/wiki/Haskell</hasGuide>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Java_(programming_language) -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Java_(programming_language)">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Language"/>
+        <hasBookApi rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://api.itbook.store/1.0/search/Java language</hasBookApi>
+        <hasGuide rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikibooks.org/wiki/Java_Programming</hasGuide>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Julia_(programming_language) -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Julia_(programming_language)">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Language"/>
+        <hasBookApi rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://api.itbook.store/1.0/search/Julia</hasBookApi>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Kotlin_(programming_language) -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Kotlin_(programming_language)">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Language"/>
+        <hasBookApi rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://api.itbook.store/1.0/search/Kotlin</hasBookApi>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Lua_(programming_language) -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Lua_(programming_language)">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Language"/>
+        <hasBookApi rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://api.itbook.store/1.0/search/Lua</hasBookApi>
+        <hasGuide rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikibooks.org/wiki/Lua_Programming</hasGuide>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Python_(programming_language) -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Python_(programming_language)">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Language"/>
+        <hasBookApi rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://api.itbook.store/1.0/search/Python</hasBookApi>
+        <hasGuide rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikibooks.org/wiki/Python_Programming</hasGuide>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Ruby_(programming_language) -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Ruby_(programming_language)">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Language"/>
+        <hasBookApi rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://api.itbook.store/1.0/search/Ruby</hasBookApi>
+        <hasGuide rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikibooks.org/wiki/Ruby_Programming</hasGuide>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Rust_(programming_language) -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Rust_(programming_language)">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Language"/>
+        <hasBookApi rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://api.itbook.store/1.0/search/Rust</hasBookApi>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Scala_(programming_language) -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Scala_(programming_language)">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Language"/>
+        <hasBookApi rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://api.itbook.store/1.0/search/Scala</hasBookApi>
+        <hasGuide rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikibooks.org/wiki/Scala</hasGuide>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Swift_(programming_language) -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Swift_(programming_language)">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Language"/>
+        <hasBookApi rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://api.itbook.store/1.0/search/Swift</hasBookApi>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#Thing">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Root Object</rdfs:label>
     </rdf:Description>
 </rdf:RDF>
 

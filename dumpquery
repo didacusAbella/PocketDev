@@ -34,3 +34,20 @@ SELECT DISTINCT ?pl ?pr WHERE {
 SELECT ?p ?o   WHERE { 
   ?p dct:subject dbr:Category:Computer_occupations .
 } 
+
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+PREFIX wikibase: <http://wikiba.se/ontology#>
+PREFIX p: <http://www.wikidata.org/prop/>
+PREFIX ps: <http://www.wikidata.org/prop/statement/>
+PREFIX pq: <http://www.wikidata.org/prop/qualifier/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX bd: <http://www.bigdata.com/rdf#>
+
+select distinct ?item ?itemLabel 
+where {
+  { ?item wdt:P31 wd:Q188860 } 
+  union { select ?item ?itemLabel where {?item wdt:P31 wd:Q271680. SERVICE wikibase:label { bd:serviceParam wikibase:language "en" . }} }
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "en" . }
+} 
+order by ?itemLabel
