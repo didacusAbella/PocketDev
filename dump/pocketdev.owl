@@ -35,6 +35,26 @@
     
 
 
+    <!-- http://www.semanticweb.org/pocketdev#generate -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pocketdev#generate">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/pocketdev#generated"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pocketdev#Language"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/pocketdev#Library"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/pocketdev#generated -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pocketdev#generated">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/pocketdev#Library"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/pocketdev#Language"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -144,10 +164,84 @@
     
 
 
+    <!-- http://dbpedia.org/resource/ASP.NET -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/ASP.NET">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Library"/>
+        <generated rdf:resource="http://dbpedia.org/resource/C_Sharp_(programming_language)"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/AngularJS -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/AngularJS">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Library"/>
+        <generated rdf:resource="http://dbpedia.org/resource/JavaScript"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Apache_Hadoop -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Apache_Hadoop">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Library"/>
+        <generated rdf:resource="http://dbpedia.org/resource/Java_(programming_language)"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Apache_Kafka -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Apache_Kafka">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Library"/>
+        <generated rdf:resource="http://dbpedia.org/resource/Java_(programming_language)"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Apache_Mahout -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Apache_Mahout">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Library"/>
+        <generated rdf:resource="http://dbpedia.org/resource/Java_(programming_language)"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Apache_Spark -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Apache_Spark">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Library"/>
+        <generated rdf:resource="http://dbpedia.org/resource/Java_(programming_language)"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/AspectJ -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/AspectJ">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Library"/>
+        <generated rdf:resource="http://dbpedia.org/resource/Java_(programming_language)"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/CNTK -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/CNTK">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Library"/>
+        <generated rdf:resource="http://dbpedia.org/resource/C++"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://dbpedia.org/resource/Cascading_Style_Sheets -->
 
     <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Cascading_Style_Sheets">
         <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Language"/>
+        <generate rdf:resource="http://dbpedia.org/resource/Bootstrap_(front-end_framework)"/>
+        <generate rdf:resource="http://dbpedia.org/resource/Foundation_(framework)"/>
         <hasBookApi rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://api.itbook.store/1.0/search/css</hasBookApi>
         <hasGuide rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikibooks.org/wiki/Cascading_Style_Sheets</hasGuide>
     </owl:NamedIndividual>
@@ -160,6 +254,33 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Language"/>
         <hasBookApi rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://api.itbook.store/1.0/search/clojure</hasBookApi>
         <hasGuide rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikibooks.org/wiki/Clojure_Programming</hasGuide>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Cocos2d -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Cocos2d">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Library"/>
+        <generated rdf:resource="http://dbpedia.org/resource/C++"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/DISLIN -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/DISLIN">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Library"/>
+        <generated rdf:resource="http://dbpedia.org/resource/Fortran"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/DataMapper -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/DataMapper">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Library"/>
+        <generated rdf:resource="http://dbpedia.org/resource/Ruby_(programming_language)"/>
     </owl:NamedIndividual>
     
 
@@ -180,10 +301,29 @@
     
 
 
+    <!-- http://dbpedia.org/resource/Ember.js -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Ember.js">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Library"/>
+        <generated rdf:resource="http://dbpedia.org/resource/JavaScript"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Express.js -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Express.js">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Library"/>
+        <generated rdf:resource="http://dbpedia.org/resource/JavaScript"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://dbpedia.org/resource/Fortran -->
 
     <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Fortran">
         <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Language"/>
+        <generate rdf:resource="http://dbpedia.org/resource/DISLIN"/>
         <hasGuide rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikibooks.org/wiki/Fortran</hasGuide>
     </owl:NamedIndividual>
     
@@ -215,12 +355,82 @@
     
 
 
+    <!-- http://dbpedia.org/resource/JQuery -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/JQuery">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Library"/>
+        <generated rdf:resource="http://dbpedia.org/resource/JavaScript"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/JUnit -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/JUnit">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Library"/>
+        <generated rdf:resource="http://dbpedia.org/resource/Java_(programming_language)"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/JavaFX -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/JavaFX">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Library"/>
+        <generated rdf:resource="http://dbpedia.org/resource/Java_(programming_language)"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://dbpedia.org/resource/JavaScript -->
 
     <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/JavaScript">
         <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Language"/>
+        <generate rdf:resource="http://dbpedia.org/resource/AngularJS"/>
+        <generate rdf:resource="http://dbpedia.org/resource/Ember.js"/>
+        <generate rdf:resource="http://dbpedia.org/resource/Express.js"/>
+        <generate rdf:resource="http://dbpedia.org/resource/JQuery"/>
+        <generate rdf:resource="http://dbpedia.org/resource/Meteor_(web_framework)"/>
+        <generate rdf:resource="http://dbpedia.org/resource/Mocha_(JavaScript_framework)"/>
+        <generate rdf:resource="http://dbpedia.org/resource/React_(JavaScript_library)"/>
         <hasBookApi rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://api.itbook.store/1.0/search/JavaScript</hasBookApi>
         <hasGuide rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikibooks.org/wiki/JavaScript</hasGuide>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/JavaServer_Faces -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/JavaServer_Faces">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Library"/>
+        <generated rdf:resource="http://dbpedia.org/resource/Java_(programming_language)"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Java_Object_Oriented_Query -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Java_Object_Oriented_Query">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Library"/>
+        <generated rdf:resource="http://dbpedia.org/resource/Java_(programming_language)"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Keras -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Keras">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Library"/>
+        <generated rdf:resource="http://dbpedia.org/resource/Python_(programming_language)"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Laravel -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Laravel">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Library"/>
+        <generated rdf:resource="http://dbpedia.org/resource/PHP"/>
     </owl:NamedIndividual>
     
 
@@ -231,6 +441,15 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Language"/>
         <hasBookApi rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://api.itbook.store/1.0/search/MATLAB</hasBookApi>
         <hasGuide rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikibooks.org/wiki/MATLAB_Programming</hasGuide>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Mockito -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Mockito">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Library"/>
+        <generated rdf:resource="http://dbpedia.org/resource/Java_(programming_language)"/>
     </owl:NamedIndividual>
     
 
@@ -252,12 +471,52 @@
     
 
 
+    <!-- http://dbpedia.org/resource/OpenCL -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/OpenCL">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Library"/>
+        <generated rdf:resource="http://dbpedia.org/resource/C++"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/OpenMP -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/OpenMP">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Library"/>
+        <generated rdf:resource="http://dbpedia.org/resource/C++"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/OpenSSL -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/OpenSSL">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Library"/>
+        <generated rdf:resource="http://dbpedia.org/resource/C++"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://dbpedia.org/resource/PHP -->
 
     <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/PHP">
         <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Language"/>
+        <generate rdf:resource="http://dbpedia.org/resource/Laravel"/>
+        <generate rdf:resource="http://dbpedia.org/resource/PHP_Unit_Testing_Framework"/>
+        <generate rdf:resource="http://dbpedia.org/resource/Symfony"/>
+        <generate rdf:resource="http://dbpedia.org/resource/Doctrine_(PHP)"/>
         <hasBookApi rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://api.itbook.store/1.0/search/PHP</hasBookApi>
         <hasGuide rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikibooks.org/wiki/PHP_Programming</hasGuide>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/PHP_Unit_Testing_Framework -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/PHP_Unit_Testing_Framework">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Library"/>
+        <generated rdf:resource="http://dbpedia.org/resource/PHP"/>
     </owl:NamedIndividual>
     
 
@@ -280,12 +539,39 @@
     
 
 
+    <!-- http://dbpedia.org/resource/RSpec -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/RSpec">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Library"/>
+        <generated rdf:resource="http://dbpedia.org/resource/Ruby_(programming_language)"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Ruby_on_Rails -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Ruby_on_Rails">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Library"/>
+        <generated rdf:resource="http://dbpedia.org/resource/Ruby_(programming_language)"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://dbpedia.org/resource/SQL -->
 
     <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/SQL">
         <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Language"/>
         <hasBookApi rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://api.itbook.store/1.0/search/SQL</hasBookApi>
         <hasGuide rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikibooks.org/wiki/Structured_Query_Language</hasGuide>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Scikit-learn -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Scikit-learn">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Library"/>
+        <generated rdf:resource="http://dbpedia.org/resource/Python_(programming_language)"/>
     </owl:NamedIndividual>
     
 
@@ -322,10 +608,46 @@
     
 
 
+    <!-- http://dbpedia.org/resource/Spring_Framework -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Spring_Framework">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Library"/>
+        <generated rdf:resource="http://dbpedia.org/resource/Java_(programming_language)"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Symfony -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Symfony">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Library"/>
+        <generated rdf:resource="http://dbpedia.org/resource/PHP"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://dbpedia.org/resource/Systems_architect -->
 
     <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Systems_architect">
         <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#IT_Career"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/TensorFlow -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/TensorFlow">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Library"/>
+        <generated rdf:resource="http://dbpedia.org/resource/C++"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Tkinter -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Tkinter">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Library"/>
+        <generated rdf:resource="http://dbpedia.org/resource/Python_(programming_language)"/>
     </owl:NamedIndividual>
     
 
@@ -340,6 +662,15 @@
     
 
 
+    <!-- http://dbpedia.org/resource/WxWidgets -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/WxWidgets">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Library"/>
+        <generated rdf:resource="http://dbpedia.org/resource/C++"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://dbpedia.org/resource/XML -->
 
     <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/XML">
@@ -350,18 +681,49 @@
     
 
 
-    <!-- http://dbpedia.org/resource/C++ -->
+    <!-- http://dbpedia.org/resource/Allegro_(software) -->
 
-    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/C++">
-        <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Language"/>
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Allegro_(software)">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Library"/>
+        <generated rdf:resource="http://dbpedia.org/resource/C++"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://dbpedia.org/resource/C_(programming_language) -->
+    <!-- http://dbpedia.org/resource/Boost_(C++_libraries) -->
 
-    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/C_(programming_language)">
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Boost_(C++_libraries)">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Library"/>
+        <generated rdf:resource="http://dbpedia.org/resource/C++"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Bootstrap_(front-end_framework) -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Bootstrap_(front-end_framework)">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Library"/>
+        <generated rdf:resource="http://dbpedia.org/resource/Cascading_Style_Sheets"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/C++ -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/C++">
         <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Language"/>
+        <generate rdf:resource="http://dbpedia.org/resource/CNTK"/>
+        <generate rdf:resource="http://dbpedia.org/resource/Cocos2d"/>
+        <generate rdf:resource="http://dbpedia.org/resource/OpenCL"/>
+        <generate rdf:resource="http://dbpedia.org/resource/OpenMP"/>
+        <generate rdf:resource="http://dbpedia.org/resource/OpenSSL"/>
+        <generate rdf:resource="http://dbpedia.org/resource/TensorFlow"/>
+        <generate rdf:resource="http://dbpedia.org/resource/WxWidgets"/>
+        <generate rdf:resource="http://dbpedia.org/resource/Allegro_(software)"/>
+        <generate rdf:resource="http://dbpedia.org/resource/Boost_(C++_libraries)"/>
+        <generate rdf:resource="http://dbpedia.org/resource/GTK+"/>
+        <generate rdf:resource="http://dbpedia.org/resource/Qt_(software)"/>
+        <generate rdf:resource="http://dbpedia.org/resource/Ultimate++"/>
     </owl:NamedIndividual>
     
 
@@ -370,6 +732,8 @@
 
     <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/C_Sharp_(programming_language)">
         <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Language"/>
+        <generate rdf:resource="http://dbpedia.org/resource/ASP.NET"/>
+        <generate rdf:resource="http://dbpedia.org/resource/Mono_(software)"/>
     </owl:NamedIndividual>
     
 
@@ -391,11 +755,56 @@
     
 
 
+    <!-- http://dbpedia.org/resource/Django_(web_framework) -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Django_(web_framework)">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Library"/>
+        <generated rdf:resource="http://dbpedia.org/resource/Python_(programming_language)"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Doctrine_(PHP) -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Doctrine_(PHP)">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Library"/>
+        <generated rdf:resource="http://dbpedia.org/resource/PHP"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://dbpedia.org/resource/Elixir_(programming_language) -->
 
     <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Elixir_(programming_language)">
         <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Language"/>
         <hasBookApi rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://api.itbook.store/1.0/search/Elixir</hasBookApi>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Flask_(web_framework) -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Flask_(web_framework)">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Library"/>
+        <generated rdf:resource="http://dbpedia.org/resource/Python_(programming_language)"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Foundation_(framework) -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Foundation_(framework)">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Library"/>
+        <generated rdf:resource="http://dbpedia.org/resource/Cascading_Style_Sheets"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/GTK+ -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/GTK+">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Library"/>
+        <generated rdf:resource="http://dbpedia.org/resource/C++"/>
     </owl:NamedIndividual>
     
 
@@ -427,10 +836,33 @@
     
 
 
+    <!-- http://dbpedia.org/resource/Hibernate_(framework) -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Hibernate_(framework)">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Library"/>
+        <generated rdf:resource="http://dbpedia.org/resource/Java_(programming_language)"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://dbpedia.org/resource/Java_(programming_language) -->
 
     <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Java_(programming_language)">
         <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Language"/>
+        <generate rdf:resource="http://dbpedia.org/resource/Apache_Hadoop"/>
+        <generate rdf:resource="http://dbpedia.org/resource/Apache_Kafka"/>
+        <generate rdf:resource="http://dbpedia.org/resource/Apache_Mahout"/>
+        <generate rdf:resource="http://dbpedia.org/resource/Apache_Spark"/>
+        <generate rdf:resource="http://dbpedia.org/resource/AspectJ"/>
+        <generate rdf:resource="http://dbpedia.org/resource/JUnit"/>
+        <generate rdf:resource="http://dbpedia.org/resource/JavaFX"/>
+        <generate rdf:resource="http://dbpedia.org/resource/JavaServer_Faces"/>
+        <generate rdf:resource="http://dbpedia.org/resource/Java_Object_Oriented_Query"/>
+        <generate rdf:resource="http://dbpedia.org/resource/Mockito"/>
+        <generate rdf:resource="http://dbpedia.org/resource/Spring_Framework"/>
+        <generate rdf:resource="http://dbpedia.org/resource/Hibernate_(framework)"/>
+        <generate rdf:resource="http://dbpedia.org/resource/Storm_(event_processor)"/>
+        <generate rdf:resource="http://dbpedia.org/resource/Weka_(machine_learning)"/>
         <hasBookApi rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://api.itbook.store/1.0/search/Java language</hasBookApi>
         <hasGuide rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikibooks.org/wiki/Java_Programming</hasGuide>
     </owl:NamedIndividual>
@@ -455,6 +887,15 @@
     
 
 
+    <!-- http://dbpedia.org/resource/Less_(stylesheet_language) -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Less_(stylesheet_language)">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Language"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Tool"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://dbpedia.org/resource/Lua_(programming_language) -->
 
     <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Lua_(programming_language)">
@@ -465,12 +906,62 @@
     
 
 
+    <!-- http://dbpedia.org/resource/Meteor_(web_framework) -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Meteor_(web_framework)">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Library"/>
+        <generated rdf:resource="http://dbpedia.org/resource/JavaScript"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Mocha_(JavaScript_framework) -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Mocha_(JavaScript_framework)">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Library"/>
+        <generated rdf:resource="http://dbpedia.org/resource/JavaScript"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Mono_(software) -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Mono_(software)">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Library"/>
+        <generated rdf:resource="http://dbpedia.org/resource/C_Sharp_(programming_language)"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://dbpedia.org/resource/Python_(programming_language) -->
 
     <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Python_(programming_language)">
         <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Language"/>
+        <generate rdf:resource="http://dbpedia.org/resource/Keras"/>
+        <generate rdf:resource="http://dbpedia.org/resource/Scikit-learn"/>
+        <generate rdf:resource="http://dbpedia.org/resource/Tkinter"/>
+        <generate rdf:resource="http://dbpedia.org/resource/Django_(web_framework)"/>
+        <generate rdf:resource="http://dbpedia.org/resource/Flask_(web_framework)"/>
         <hasBookApi rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://api.itbook.store/1.0/search/Python</hasBookApi>
         <hasGuide rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikibooks.org/wiki/Python_Programming</hasGuide>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Qt_(software) -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Qt_(software)">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Library"/>
+        <generated rdf:resource="http://dbpedia.org/resource/C++"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/React_(JavaScript_library) -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/React_(JavaScript_library)">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Library"/>
+        <generated rdf:resource="http://dbpedia.org/resource/JavaScript"/>
     </owl:NamedIndividual>
     
 
@@ -479,6 +970,9 @@
 
     <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Ruby_(programming_language)">
         <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Language"/>
+        <generate rdf:resource="http://dbpedia.org/resource/DataMapper"/>
+        <generate rdf:resource="http://dbpedia.org/resource/RSpec"/>
+        <generate rdf:resource="http://dbpedia.org/resource/Ruby_on_Rails"/>
         <hasBookApi rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://api.itbook.store/1.0/search/Ruby</hasBookApi>
         <hasGuide rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikibooks.org/wiki/Ruby_Programming</hasGuide>
     </owl:NamedIndividual>
@@ -494,6 +988,15 @@
     
 
 
+    <!-- http://dbpedia.org/resource/Sass_(stylesheet_language) -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Sass_(stylesheet_language)">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Language"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Tool"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://dbpedia.org/resource/Scala_(programming_language) -->
 
     <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Scala_(programming_language)">
@@ -504,11 +1007,38 @@
     
 
 
+    <!-- http://dbpedia.org/resource/Storm_(event_processor) -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Storm_(event_processor)">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Library"/>
+        <generated rdf:resource="http://dbpedia.org/resource/Java_(programming_language)"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://dbpedia.org/resource/Swift_(programming_language) -->
 
     <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Swift_(programming_language)">
         <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Language"/>
         <hasBookApi rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://api.itbook.store/1.0/search/Swift</hasBookApi>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Ultimate++ -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Ultimate++">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Library"/>
+        <generated rdf:resource="http://dbpedia.org/resource/C++"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Weka_(machine_learning) -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Weka_(machine_learning)">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Library"/>
+        <generated rdf:resource="http://dbpedia.org/resource/Java_(programming_language)"/>
     </owl:NamedIndividual>
     
 
