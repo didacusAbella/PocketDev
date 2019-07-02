@@ -1,0 +1,4 @@
+{
+    "localhost": "http://localhost:3030/pd",
+    "wikidata": "https://query.wikidata.org/sparql"
+}

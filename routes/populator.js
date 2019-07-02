@@ -1,40 +1,40 @@
 const express = require('express');
 const newClient = require("./utils/client");
 const query = require("./utils/query");
-
+const endPoints = require("./utils/endpoint");
 const router = express.Router();
-const client = newClient.buildClient("http://localhost:3030/pd");
+const localClient = newClient.buildClient(endPoints.localhost);
 
 router.get("/example", function (req, res) {
-    client.query(query.example())
+    localClient.query(query.example())
     .execute()
     .then((result) => res.json(result))
     .catch((err) => res.json(err));
 });
 
 router.post("/linguaggi", function(req, res){
-    client.query(query.insertLanguages())
+    localClient.query(query.insertLanguages())
     .execute()
     .then((result) => res.json(result))
     .catch((err) => res.json(err));
 });
 
 router.post('/book', function(req,res){
-    client.query(query.insertBooks())
+    localClient.query(query.insertBooks())
     .execute()
     .then((result) => res.json(result))
     .catch((err) => res.json(err));
 })
 
 router.post('/tool', function(req,res){
-    client.query(query.insertTools())
+    localClient.query(query.insertTools())
     .execute()
     .then((result) => res.json(result))
     .catch((err) => res.json(err));
 })
 
 router.post('/framwork', function(req,res){
-    client.query(query.insertFrameworks())
+    localClient.query(query.insertFrameworks())
     .execute()
     .then((result) => res.json(result))
     .catch((err) => res.json(err));
