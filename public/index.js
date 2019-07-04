@@ -1,8 +1,9 @@
-const App = {
-  view: function(){
-    return m("h1", "Hello World");
+import ko from "https://dev.jspm.io/knockout";
+
+class PocketViewModel {
+  constructor(careers) {
+    this.careers = ko.observableArray(careers);
   }
 }
 
-const root = document.getElementById("root");
-m.render(root, App);
+ko.applyBindings(new PocketViewModel(["Developer", "Project Manager", "Hacker"]));

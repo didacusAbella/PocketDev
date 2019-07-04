@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,12 +14,85 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <meta name="msapplication-config" content="browserconfig.xml">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css" rel="stylesheet">
-  <script src="https://unpkg.com/mithril@next/mithril.js" defer></script>
-  <script src="./index.js" defer></script>
+  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css'>
+  <link rel="stylesheet" href="./index.css">
+  <script type="module" src="./index.js"></script>
 </head>
+
 <body>
-  <main id="root">
-    
+  <header>
+    <nav class="navbar is-primary" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        <h1 class="navbar-item is-size-5 has-text-weight-bold">PocketDev</h1>
+      </div>
+    </nav>
+  </header>
+  <main id="root" class="tile is-ancestor">
+    <section class="tile is-parent is-4 is-vertical">
+      <div class="tile is-child box">
+        <aside class="menu">
+          <p class="menu-label">Choose a Career</p>
+          <ul class="menu-list">
+            <li>
+              <div class="select is-primary is-fullwidth">
+                <select data-bind="options: careers"></select>
+              </div>
+            </li>
+          </ul>
+          <p class="menu-label">Percorso Formativo Teorico</p>
+          <ul class="menu-list">
+            <li><a href="#">Base</a></li>
+            <li><a href="#">Intermedio</a></li>
+            <li><a href="#">Avanzato</a></li>
+          </ul>
+          <p class="menu-label">Percordo Formativo Pratico</p>
+          <ul class="menu-list">
+            <li><a>Some Tool or Language</a></li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+    <section class="tile is-parent">
+      <article class="tile is-child box">
+        <nav class="breadcrumb is-centered" aria-label="breadcrumbs">
+          <ul>
+            <li>
+              <a href="#">Home</a>
+            </li>
+          </ul>
+        </nav>
+      </article>
+    </section>
   </main>
+  <footer class="footer columns">
+      <div class="column">
+        <div class="content">
+          <h3 class="subtitle">About The Authors</h3>
+          <p class="heading">
+              <a href="https://github.com/didacusabella">Diego Avella</a> and <a href="https://github.com/cicciotecchio">Francesco Vicidomini</a>
+              are two bachelor's degree students from the University of Salerno (Italy). They attend master's degree in Computer Science
+              in Software Engineering with particular interest in Project Management Activities, Software Testing Techniques and Architectural Patterns.
+          </p>
+        </div>
+      </div>
+      <div class="column">
+        <div class="content">
+          <h3>About the Site</h3>
+          <p class="heading">
+            <strong>PocketDev</strong> is a Semantic Web applications created with the vision of help people to specialize in
+            an IT Career focusing on the most important tools and theory's concepts.     
+          </p>
+        </div>
+      </div>
+      <div class="column">
+        <div class="content">
+          <h3>About the Technologies</h3>
+          <p class="heading">
+            PocketDev is licensed with <strong>Apache</strong> License and developed with the following technologies
+          </p>
+        </div>
+      </div>
+  </footer>
 </body>
+
 </html>
