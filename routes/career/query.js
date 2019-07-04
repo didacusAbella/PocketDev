@@ -22,16 +22,7 @@ function getCareerByName(name){
             }`
 }
 
-//
-
-//
-
-//
-
-//
-
-//
-
-module.exports = {allCareers,
-                  getCareerByName
+module.exports = {
+                    allCareers,
+                    getCareerByName
                 };
