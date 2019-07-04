@@ -1,29 +1,37 @@
-function example(){
-    return `SELECT ?s ?p ?o 
-            WHERE { 
-            ?s ?p ?o
+const endpoints = require("../utils/endpoint");
+
+function allCareers(){
+    return `SELECT ?career ?abs ?lbl WHERE { 
+            ?career a pd:IT_Career ;
+            SERVICE <${endpoints.dbpedia}>{
+                ?career dbo:abstract ?abs ;
+                rdfs:label ?lbl.
+            }
+                FILTER langMatches(lang(?abs),"en")
+                FILTER langMatches(lang(?lbl),"en")
             }`;
 }
 
-function insertLanguages(){
-    return ``;
+function getCareerByName(name){
+    return `SELECT ?career ?abs WHERE{
+                ?career pd:hasName "${name}" .
+                SERVICE <${endpoints.dbpedia}>{
+                    ?career rdfs:comment ?abs .
+                }
+                FILTER langMatches(lang(?abs),"en")
+            }`
 }
 
-function insertBooks(){
-    return ``;
-}
+//
 
-function insertTools(){
-    return ``;
-}
+//
 
-function insertFrameworks(){
-    return ``;
-}
+//
 
-module.exports = {example, 
-                  insertLanguages,
-                  insertBooks,
-                  insertTools,
-                  insertFrameworks
+//
+
+//
+
+module.exports = {allCareers,
+                  getCareerByName
                 };
