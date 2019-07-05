@@ -1,7 +1,7 @@
 const express = require('express');
-const newClient = require("./utils/client");
-const query = require("./utils/query");
-const endPoints = require("./utils/endpoint");
+const newClient = require("../utils/client");
+const query = require("./query");
+const endPoints = require("../utils/endpoint");
 const router = express.Router();
 const localClient = newClient.buildClient(endPoints.localhost);
 
