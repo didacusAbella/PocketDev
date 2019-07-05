@@ -37,9 +37,12 @@ function getAdvacedTheory(){
 }
 
 function getTheoryByCareer(name){
-    return `SELECT ?th WHERE {
+    return `SELECT ?theoryName ?theoryType WHERE {
         ?career pd:hasName "${name}" ;
-        pd:follow ?th .
+        pd:follow ?theory .
+        ?theory pd:hasName ?theoryName ;
+        a ?theoryType .
+        FILTER(?theoryType != owl:NamedIndividual)
     }`
 }
 
