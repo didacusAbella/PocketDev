@@ -8,10 +8,15 @@ function allCareers(){
 }
 
 function getCareerByName(name){
-    return `SELECT ?career ?abs WHERE{
+    return `SELECT ?abs ?caption ?competencies ?formation WHERE{
                 ?career pd:hasName "${name}" .
                 SERVICE <${endpoints.dbpedia}>{
                     ?career rdfs:comment ?abs .
+                    OPTIONAL {
+                    ?career dbp:caption ?caption;
+                    dbp:competencies ?competencies;
+                    dbp:formation ?formation .
+                }
                 }
                 FILTER langMatches(lang(?abs),"en")
             }`
