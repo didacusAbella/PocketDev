@@ -1,14 +1,9 @@
 const endpoints = require("../utils/endpoint");
 
 function allCareers(){
-    return `SELECT ?career ?abs ?lbl WHERE { 
+    return `SELECT ?name WHERE { 
             ?career a pd:IT_Career ;
-            SERVICE <${endpoints.dbpedia}>{
-                ?career dbo:abstract ?abs ;
-                rdfs:label ?lbl.
-            }
-                FILTER langMatches(lang(?abs),"en")
-                FILTER langMatches(lang(?lbl),"en")
+            pd:hasName ?name
             }`;
 }
 

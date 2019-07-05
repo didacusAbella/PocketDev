@@ -35,19 +35,17 @@ function getAdvacedTheory(){
                 FILTER langMatches(lang(?lbl),"en")
             }`;
 }
-/*
-function getTheoryByName(name){
-return `SELECT ?abs ?lbl WHERE{
-    ?th a pd:hasName "${name}" .
-    SERVICE <${endpoints.dbpedia}>{
-        ?th rdfs:label ?lbl
-    }
-}`
+
+function getTheoryByCareer(name){
+    return `SELECT ?th WHERE {
+        ?career pd:hasName "${name}" ;
+        pd:follow ?th .
+    }`
 }
-*/
 
 module.exports = {
                     getBaseTheory,
                     getIntermediateTheory,
-                    getAdvacedTheory
+                    getAdvacedTheory,
+                    getTheoryByCareer
                 }
