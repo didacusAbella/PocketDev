@@ -283,6 +283,7 @@
 
     <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Agile_software_development">
         <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#AdvancedTheory"/>
+        <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">agile</hasName>
     </owl:NamedIndividual>
     
 
@@ -379,6 +380,7 @@
 
     <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Artificial_intelligence">
         <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#AdvancedTheory"/>
+        <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ai</hasName>
     </owl:NamedIndividual>
     
 
@@ -387,6 +389,7 @@
 
     <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Artificial_neural_network">
         <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#IntermediateTheory"/>
+        <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neural_network</hasName>
     </owl:NamedIndividual>
     
 
@@ -421,6 +424,7 @@
 
     <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/COSMIC_software_sizing">
         <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#AdvancedTheory"/>
+        <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cosmic</hasName>
     </owl:NamedIndividual>
     
 
@@ -459,6 +463,7 @@
 
     <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Cloud_computing">
         <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#AdvancedTheory"/>
+        <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cloud_computing</hasName>
     </owl:NamedIndividual>
     
 
@@ -476,6 +481,7 @@
 
     <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Compiler">
         <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#IntermediateTheory"/>
+        <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">compiler</hasName>
     </owl:NamedIndividual>
     
 
@@ -484,6 +490,7 @@
 
     <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Computer_security">
         <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#BaseTheory"/>
+        <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">computer_security</hasName>
     </owl:NamedIndividual>
     
 
@@ -518,6 +525,7 @@
 
     <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Data_integration">
         <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#IntermediateTheory"/>
+        <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">data_integration</hasName>
     </owl:NamedIndividual>
     
 
@@ -535,6 +543,7 @@
 
     <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Data_structure">
         <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#BaseTheory"/>
+        <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">data_structure</hasName>
     </owl:NamedIndividual>
     
 
@@ -543,6 +552,7 @@
 
     <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Data_warehouse">
         <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#IntermediateTheory"/>
+        <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">data_warehouse</hasName>
     </owl:NamedIndividual>
     
 
@@ -551,6 +561,7 @@
 
     <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Database">
         <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#BaseTheory"/>
+        <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">database</hasName>
     </owl:NamedIndividual>
     
 
@@ -573,6 +584,7 @@
 
     <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Digital_forensics">
         <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#AdvancedTheory"/>
+        <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">digital_forensics</hasName>
     </owl:NamedIndividual>
     
 
@@ -581,6 +593,7 @@
 
     <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Distributed_computing">
         <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#AdvancedTheory"/>
+        <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">distributed_computing</hasName>
     </owl:NamedIndividual>
     
 
@@ -633,6 +646,7 @@
 
     <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Encryption">
         <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#IntermediateTheory"/>
+        <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">encryption</hasName>
     </owl:NamedIndividual>
     
 
@@ -660,6 +674,7 @@
 
     <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Function_point">
         <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#AdvancedTheory"/>
+        <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fp</hasName>
     </owl:NamedIndividual>
     
 
@@ -668,6 +683,7 @@
 
     <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Functional_programming">
         <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#AdvancedTheory"/>
+        <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">functional_programming</hasName>
     </owl:NamedIndividual>
     
 
@@ -862,6 +878,7 @@
 
     <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Linear_algebra">
         <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#BaseTheory"/>
+        <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">linear_algebra</hasName>
     </owl:NamedIndividual>
     
 
@@ -880,6 +897,7 @@
 
     <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/MIPS_instruction_set">
         <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#BaseTheory"/>
+        <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mips</hasName>
     </owl:NamedIndividual>
     
 
@@ -888,6 +906,7 @@
 
     <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Machine_learning">
         <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#IntermediateTheory"/>
+        <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ml</hasName>
     </owl:NamedIndividual>
     
 
@@ -929,6 +948,7 @@
 
     <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Model_checking">
         <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#AdvancedTheory"/>
+        <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">model_checking</hasName>
     </owl:NamedIndividual>
     
 
@@ -984,6 +1004,7 @@
 
     <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/NoSQL">
         <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#IntermediateTheory"/>
+        <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nosql</hasName>
     </owl:NamedIndividual>
     
 
@@ -1000,6 +1021,7 @@
 
     <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Object-oriented_programming">
         <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#BaseTheory"/>
+        <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">oop</hasName>
     </owl:NamedIndividual>
     
 
@@ -1060,6 +1082,7 @@
 
     <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Operating_system">
         <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#BaseTheory"/>
+        <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">so</hasName>
     </owl:NamedIndividual>
     
 
@@ -1091,6 +1114,7 @@
 
     <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Parallel_computing">
         <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#IntermediateTheory"/>
+        <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">parallel_computing</hasName>
     </owl:NamedIndividual>
     
 
@@ -1099,6 +1123,7 @@
 
     <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Penetration_test">
         <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#IntermediateTheory"/>
+        <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">penetration_test</hasName>
     </owl:NamedIndividual>
     
 
@@ -1133,6 +1158,7 @@
 
     <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Procedural_programming">
         <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#BaseTheory"/>
+        <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">procedural_programming</hasName>
     </owl:NamedIndividual>
     
 
@@ -1155,6 +1181,7 @@
 
     <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Quality_management">
         <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#IntermediateTheory"/>
+        <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">quality_management</hasName>
     </owl:NamedIndividual>
     
 
@@ -1245,6 +1272,7 @@
 
     <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Semantic_Web">
         <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#IntermediateTheory"/>
+        <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">semantic_web</hasName>
     </owl:NamedIndividual>
     
 
@@ -1253,6 +1281,7 @@
 
     <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Serverless_computing">
         <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#AdvancedTheory"/>
+        <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">serverless_computing</hasName>
     </owl:NamedIndividual>
     
 
@@ -1261,6 +1290,7 @@
 
     <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Social_network">
         <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#AdvancedTheory"/>
+        <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">social_network</hasName>
     </owl:NamedIndividual>
     
 
@@ -1269,6 +1299,7 @@
 
     <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Software_engineering">
         <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#IntermediateTheory"/>
+        <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">software_engineering</hasName>
     </owl:NamedIndividual>
     
 
@@ -1277,6 +1308,7 @@
 
     <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Software_project_management">
         <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#AdvancedTheory"/>
+        <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">spm</hasName>
     </owl:NamedIndividual>
     
 
@@ -1318,6 +1350,7 @@
 
     <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Statistics">
         <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#BaseTheory"/>
+        <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">statistics</hasName>
     </owl:NamedIndividual>
     
 
@@ -1410,6 +1443,7 @@
 
     <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Theory_of_computation">
         <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#IntermediateTheory"/>
+        <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">theory_of_computation</hasName>
     </owl:NamedIndividual>
     
 
@@ -1453,6 +1487,7 @@
 
     <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Wireless_network">
         <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#IntermediateTheory"/>
+        <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wireless</hasName>
     </owl:NamedIndividual>
     
 
