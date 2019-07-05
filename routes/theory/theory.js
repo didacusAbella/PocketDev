@@ -9,38 +9,30 @@ const localClient = newClient.buildClient(endPoints.localhost);
 router.get("/base", function(req,res){
     localClient.query(query.getBaseTheory())
     .execute()
-    .then(result => res.json(result))
+    .then(result => res.json(res.json(formatter(result))))
     .catch(err => res.json(err));
 })
 
 router.get("/intermediate", function(req,res){
     localClient.query(query.getIntermediateTheory())
     .execute()
-    .then(result => res.json(result))
+    .then(result => res.json(res.json(formatter(result))))
     .catch(err => res.json(err));
 })
 
 router.get("/advanced", function(req,res){
     localClient.query(query.getAdvacedTheory())
     .execute()
-    .then(result => res.json(result))
+    .then(result => res.json(res.json(formatter(result))))
     .catch(err => res.json(err));
 })
 
 router.get("/career/:name", function(req,res){
     localClient.query(query.getTheoryByCareer(req.params.name))
     .execute()
-    .then(result => res.json(result))
+    .then(result => res.json(res.json(formatter(result))))
     .catch(err => res.json(err));
 })
-
-/*router.get("/theoryByName", function(req,res){
-    const name = req.query.name; 
-    localClient.query(query.getTheoryByName(name))
-    .execute()
-    .then((result) => res.json(result))
-    .catch((err)=> res.json(err));
-})*/
 
 
 module.exports = router;
