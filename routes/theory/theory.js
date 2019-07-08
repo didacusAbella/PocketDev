@@ -35,4 +35,11 @@ router.get("/career/:name", function(req,res){
     .catch(err => res.json(err));
 })
 
+router.get("/:name", function(req,res){
+    localClient.query(query.getTheoryByName(req.params.name))
+    .execute()
+    .then(result => res.json(formatter(result)))
+    .catch(err => res.json(err));
+})
+
 module.exports = router;

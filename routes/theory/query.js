@@ -1,6 +1,6 @@
 const endpoints = require("../utils/endpoint");
 
-function getBaseTheory(){
+function getBaseTheory() {
     return `SELECT ?abs ?lbl WHERE {
                 ?th a pd:BaseTheory .
                 SERVICE <${endpoints.dbpedia}>{
@@ -12,7 +12,7 @@ function getBaseTheory(){
             }`;
 }
 
-function getIntermediateTheory(){
+function getIntermediateTheory() {
     return `SELECT ?abs ?lbl WHERE {
                 ?th a pd:IntermediateTheory .
                 SERVICE <${endpoints.dbpedia}>{
@@ -24,7 +24,7 @@ function getIntermediateTheory(){
             }`;
 }
 
-function getAdvacedTheory(){
+function getAdvacedTheory() {
     return `SELECT ?abs ?lbl WHERE {
                 ?th a pd:AdvancedTheory .
                 SERVICE <${endpoints.dbpedia}>{
@@ -36,7 +36,7 @@ function getAdvacedTheory(){
             }`;
 }
 
-function getTheoryByCareer(name){
+function getTheoryByCareer(name) {
     return `SELECT ?theoryName ?theoryType WHERE {
         ?career pd:hasName "${name}" ;
         pd:follow ?theory .
@@ -46,9 +46,23 @@ function getTheoryByCareer(name){
     }`
 }
 
+function getTheoryByName(name){
+    return ` SELECT  ?var ?abstract
+    WHERE {
+    ?th rdfs:subClassOf* pd:Educational_Path .
+      ?var a ?th .
+      ?var pd:hasName "${name}".
+      SERVICE <${endpoints.dbpedia}> {
+        ?var dbo:abstract ?abstract
+      }
+      FILTER(langMatches(lang(?abstract), "en"))
+    }`
+}
+
 module.exports = {
-                    getBaseTheory,
-                    getIntermediateTheory,
-                    getAdvacedTheory,
-                    getTheoryByCareer
-                }
+    getBaseTheory,
+    getIntermediateTheory,
+    getAdvacedTheory,
+    getTheoryByCareer,
+    getTheoryByName
+}
