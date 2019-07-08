@@ -175,13 +175,16 @@
 
     <!-- http://www.semanticweb.org/pocketdev#Educational_Path -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/pocketdev#Educational_Path"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/pocketdev#Educational_Path">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/pocketdev#IT_Career -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/pocketdev#IT_Career">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/pocketdev#follow"/>
@@ -256,6 +259,14 @@
     <owl:Class rdf:about="http://www.semanticweb.org/pocketdev#Versioning">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pocketdev#Tool"/>
     </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#Thing -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#Thing">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Root Object</rdfs:label>
+    </rdf:Description>
     
 
 
@@ -2179,20 +2190,6 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Library"/>
         <generated rdf:resource="http://dbpedia.org/resource/Java_(programming_language)"/>
     </owl:NamedIndividual>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Annotations
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#Thing">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Root Object</rdfs:label>
-    </rdf:Description>
     
 
 
