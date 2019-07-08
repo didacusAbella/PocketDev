@@ -105,9 +105,9 @@
     
 
 
-    <!-- http://www.semanticweb.org/pocketdev#hasBookApi -->
+    <!-- http://www.semanticweb.org/pocketdev#hasBook -->
 
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/pocketdev#hasBookApi">
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/pocketdev#hasBook">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/pocketdev#Language"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">describe some api to fetch book for a specific language</rdfs:comment>
@@ -306,6 +306,7 @@
     <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/ASP.NET">
         <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Library"/>
         <generated rdf:resource="http://dbpedia.org/resource/C_Sharp_(programming_language)"/>
+        <hasBook rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/asp.net_mvc/asp.net_mvc_useful_resources.htm</hasBook>
         <hasGuide rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/asp.net_mvc/asp.net_mvc_quick_guide.htm</hasGuide>
         <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">asp.net</hasName>
     </owl:NamedIndividual>
@@ -318,6 +319,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#AdvancedTheory"/>
         <dependsOn rdf:resource="http://dbpedia.org/resource/Software_engineering"/>
         <dependsOn rdf:resource="http://dbpedia.org/resource/Software_project_management"/>
+        <hasBook rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/agile/agile_useful_resources.htm</hasBook>
         <hasGuide rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/agile/agile_quick_guide.htm</hasGuide>
         <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">agile</hasName>
     </owl:NamedIndividual>
@@ -350,6 +352,7 @@
     <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/AngularJS">
         <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Library"/>
         <generated rdf:resource="http://dbpedia.org/resource/JavaScript"/>
+        <hasBook rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/angularjs/angularjs_useful_resources.htm</hasBook>
         <hasGuide rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/angularjs/angularjs_quick_guide.htm</hasGuide>
         <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">angularJS</hasName>
     </owl:NamedIndividual>
@@ -360,6 +363,7 @@
 
     <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Apache_Ant">
         <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Coding"/>
+        <hasBook rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/ant/ant_useful_resources.htm</hasBook>
         <hasGuide rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/ant/ant_quick_guide.htm</hasGuide>
         <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ant</hasName>
     </owl:NamedIndividual>
@@ -371,6 +375,7 @@
     <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Apache_Hadoop">
         <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Library"/>
         <generated rdf:resource="http://dbpedia.org/resource/Java_(programming_language)"/>
+        <hasBook rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/hadoop/hadoop_useful_resources.htm</hasBook>
         <hasGuide rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/hadoop/hadoop_quick_guide.htm</hasGuide>
         <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hadoop</hasName>
     </owl:NamedIndividual>
@@ -382,6 +387,7 @@
     <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Apache_Kafka">
         <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Library"/>
         <generated rdf:resource="http://dbpedia.org/resource/Java_(programming_language)"/>
+        <hasBook rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/apache_kafka/apache_kafka_useful_resources.htm</hasBook>
         <hasGuide rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/apache_kafka/apache_kafka_quick_guide.htm</hasGuide>
         <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">kafka</hasName>
     </owl:NamedIndividual>
@@ -393,6 +399,7 @@
     <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Apache_Mahout">
         <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Library"/>
         <generated rdf:resource="http://dbpedia.org/resource/Java_(programming_language)"/>
+        <hasBook rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/mahout/mahout_resources.htm</hasBook>
         <hasGuide rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/mahout/mahout_quick_guide.htm</hasGuide>
         <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mahout</hasName>
     </owl:NamedIndividual>
@@ -403,6 +410,7 @@
 
     <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Apache_Maven">
         <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Coding"/>
+        <hasBook rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/maven/maven_useful_resources.htm</hasBook>
         <hasGuide rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/maven/maven_quick_guide.htm</hasGuide>
         <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">maven</hasName>
     </owl:NamedIndividual>
@@ -414,6 +422,7 @@
     <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Apache_Spark">
         <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Library"/>
         <generated rdf:resource="http://dbpedia.org/resource/Java_(programming_language)"/>
+        <hasBook rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/apache_spark/apache_spark_useful_resources.htm</hasBook>
         <hasGuide rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/apache_spark/apache_spark_quick_guide.htm</hasGuide>
         <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">spark</hasName>
     </owl:NamedIndividual>
@@ -424,6 +433,7 @@
 
     <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Apache_Subversion">
         <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Versioning"/>
+        <hasBook rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/svn/svn_useful_resources.htm</hasBook>
         <hasGuide rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/svn/svn_quick_guide.htm</hasGuide>
         <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">svn</hasName>
     </owl:NamedIndividual>
@@ -437,6 +447,7 @@
         <dependsOn rdf:resource="http://dbpedia.org/resource/Artificial_neural_network"/>
         <dependsOn rdf:resource="http://dbpedia.org/resource/Data_integration"/>
         <dependsOn rdf:resource="http://dbpedia.org/resource/Machine_learning"/>
+        <hasBook rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/artificial_intelligence/artificial_intelligence_useful_resources.htm</hasBook>
         <hasGuide rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/artificial_intelligence/artificial_intelligence_quick_guide.htm</hasGuide>
         <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ai</hasName>
     </owl:NamedIndividual>
@@ -449,6 +460,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#IntermediateTheory"/>
         <dependsOn rdf:resource="http://dbpedia.org/resource/Linear_algebra"/>
         <dependsOn rdf:resource="http://dbpedia.org/resource/Statistics"/>
+        <hasBook rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/artificial_neural_network/artificial_neural_network_useful_resources.htm</hasBook>
         <hasGuide rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/artificial_neural_network/artificial_neural_network_quick_guide.htm</hasGuide>
         <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neural_network</hasName>
     </owl:NamedIndividual>
@@ -501,7 +513,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Language"/>
         <generate rdf:resource="http://dbpedia.org/resource/Bootstrap_(front-end_framework)"/>
         <generate rdf:resource="http://dbpedia.org/resource/Foundation_(framework)"/>
-        <hasBookApi rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://api.itbook.store/1.0/search/css</hasBookApi>
+        <hasBook rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/css/css_useful_resources.htm</hasBook>
         <hasGuide rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/css/css_quick_guide.htm</hasGuide>
         <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CSS</hasName>
     </owl:NamedIndividual>
@@ -521,7 +533,7 @@
 
     <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Clojure">
         <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Language"/>
-        <hasBookApi rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://api.itbook.store/1.0/search/clojure</hasBookApi>
+        <hasBook rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/clojure/clojure_useful_resources.htm</hasBook>
         <hasGuide rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/clojure/clojure_quick_guide.htm</hasGuide>
         <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Clojure</hasName>
     </owl:NamedIndividual>
@@ -534,6 +546,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#AdvancedTheory"/>
         <dependsOn rdf:resource="http://dbpedia.org/resource/Parallel_computing"/>
         <dependsOn rdf:resource="http://dbpedia.org/resource/Wireless_network"/>
+        <hasBook rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/cloud_computing/cloud_computing_useful_resources.htm</hasBook>
         <hasGuide rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/cloud_computing/cloud_computing_quick_guide.htm</hasGuide>
         <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cloud_computing</hasName>
     </owl:NamedIndividual>
@@ -558,6 +571,7 @@
         <dependsOn rdf:resource="http://dbpedia.org/resource/MIPS_instruction_set"/>
         <dependsOn rdf:resource="http://dbpedia.org/resource/Object-oriented_programming"/>
         <dependsOn rdf:resource="http://dbpedia.org/resource/Procedural_programming"/>
+        <hasBook rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/compiler_design/compiler_design_useful_resources.htm</hasBook>
         <hasGuide rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/compiler_design/compiler_design_quick_guide.htm</hasGuide>
         <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">compiler</hasName>
     </owl:NamedIndividual>
@@ -568,6 +582,7 @@
 
     <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Computer_security">
         <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#BaseTheory"/>
+        <hasBook rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/information_security_cyber_law/useful_resources.htm</hasBook>
         <hasGuide rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/information_security_cyber_law/quick_guide.htm</hasGuide>
         <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">computer_security</hasName>
     </owl:NamedIndividual>
@@ -627,6 +642,7 @@
 
     <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Data_structure">
         <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#BaseTheory"/>
+        <hasBook rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/data_structures_algorithms/dsa_useful_resources.htm</hasBook>
         <hasGuide rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/data_structures_algorithms/dsa_quick_guide.htm</hasGuide>
         <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">data_structure</hasName>
     </owl:NamedIndividual>
@@ -639,6 +655,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#IntermediateTheory"/>
         <dependsOn rdf:resource="http://dbpedia.org/resource/Data_structure"/>
         <dependsOn rdf:resource="http://dbpedia.org/resource/Database"/>
+        <hasBook rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/dwh/dwh_useful_resources.htm</hasBook>
         <hasGuide rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/dwh/dwh_quick_guide.htm</hasGuide>
         <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">data_warehouse</hasName>
     </owl:NamedIndividual>
@@ -649,8 +666,8 @@
 
     <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Database">
         <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#BaseTheory"/>
+        <hasBook rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/dbms/dbms_useful_resources.htm</hasBook>
         <hasGuide rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/dbms/dbms_quick_guide.htm</hasGuide>
-        <hasGuide rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/operating_system/os_quick_guide.htm</hasGuide>
         <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">database</hasName>
     </owl:NamedIndividual>
     
@@ -675,6 +692,7 @@
     <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Digital_forensics">
         <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#AdvancedTheory"/>
         <dependsOn rdf:resource="http://dbpedia.org/resource/Encryption"/>
+        <hasBook rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/python_digital_forensics/python_digital_forensics_useful_resources.htm</hasBook>
         <hasGuide rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/python_digital_forensics/python_digital_forensics_quick_guide.htm</hasGuide>
         <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">digital_forensics</hasName>
     </owl:NamedIndividual>
@@ -687,6 +705,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#AdvancedTheory"/>
         <dependsOn rdf:resource="http://dbpedia.org/resource/Parallel_computing"/>
         <dependsOn rdf:resource="http://dbpedia.org/resource/Wireless_network"/>
+        <hasBook rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/parallel_computer_architecture/parallel_computer_architecture_useful_resources.htm</hasBook>
         <hasGuide rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/parallel_computer_architecture/parallel_computer_architecture_quick_guide.htm</hasGuide>
         <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">distributed_computing</hasName>
     </owl:NamedIndividual>
@@ -734,6 +753,7 @@
     <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Ember.js">
         <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Library"/>
         <generated rdf:resource="http://dbpedia.org/resource/JavaScript"/>
+        <hasBook rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/emberjs/emberjs_resources.htm</hasBook>
         <hasGuide rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/emberjs/emberjs_quick_guide.htm</hasGuide>
         <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ember.js</hasName>
     </owl:NamedIndividual>
@@ -758,6 +778,7 @@
     <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Express.js">
         <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Library"/>
         <generated rdf:resource="http://dbpedia.org/resource/JavaScript"/>
+        <hasBook rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/expressjs/expressjs_useful_resources.htm</hasBook>
         <hasGuide rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/expressjs/expressjs_quick_guide.htm</hasGuide>
         <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">express.js</hasName>
     </owl:NamedIndividual>
@@ -769,6 +790,7 @@
     <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Fortran">
         <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Language"/>
         <generate rdf:resource="http://dbpedia.org/resource/DISLIN"/>
+        <hasBook rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/fortran/fortran_useful_resources.htm</hasBook>
         <hasGuide rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/fortran/fortran_quick_guide.htm</hasGuide>
         <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fortran</hasName>
     </owl:NamedIndividual>
@@ -847,6 +869,7 @@
 
     <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Git">
         <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Versioning"/>
+        <hasBook rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/git/git_useful_resources.htm</hasBook>
         <hasGuide rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/git/git_quick_guide.htm</hasGuide>
         <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">git</hasName>
     </owl:NamedIndividual>
@@ -857,6 +880,7 @@
 
     <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Gradle">
         <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Coding"/>
+        <hasBook rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/gradle/gradle_useful_resources.htm</hasBook>
         <hasGuide rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/gradle/gradle_quick_guide.htm</hasGuide>
         <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">gradle</hasName>
     </owl:NamedIndividual>
@@ -867,7 +891,7 @@
 
     <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/HTML5">
         <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Language"/>
-        <hasBookApi rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://api.itbook.store/1.0/search/HTML5</hasBookApi>
+        <hasBook rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/html/html_useful_resources.htm</hasBook>
         <hasGuide rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/html/html_quick_guide.htm</hasGuide>
         <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HTML5</hasName>
     </owl:NamedIndividual>
@@ -899,6 +923,8 @@
 
     <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Internet_protocol_suite">
         <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#BaseTheory"/>
+        <hasGuide rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/data_communication_computer_network/dcn_quick_guide.htm</hasGuide>
+        <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">internet_protocol</hasName>
     </owl:NamedIndividual>
     
 
@@ -908,6 +934,7 @@
     <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/JQuery">
         <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Library"/>
         <generated rdf:resource="http://dbpedia.org/resource/JavaScript"/>
+        <hasBook rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/jquery/jquery-resources.htm</hasBook>
         <hasGuide rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/jquery/jquery-quick-guide.htm</hasGuide>
         <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">jQuery</hasName>
     </owl:NamedIndividual>
@@ -919,6 +946,7 @@
     <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/JUnit">
         <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Library"/>
         <generated rdf:resource="http://dbpedia.org/resource/Java_(programming_language)"/>
+        <hasBook rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/junit/junit_useful_resources.htm</hasBook>
         <hasGuide rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/junit/junit_quick_guide.htm</hasGuide>
         <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">jUnit</hasName>
     </owl:NamedIndividual>
@@ -930,6 +958,7 @@
     <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/JavaFX">
         <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Library"/>
         <generated rdf:resource="http://dbpedia.org/resource/Java_(programming_language)"/>
+        <hasBook rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/javafx/javafx_useful_resources.htm</hasBook>
         <hasGuide rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/javafx/javafx_quick_guide.htm</hasGuide>
         <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">javafx</hasName>
     </owl:NamedIndividual>
@@ -950,7 +979,7 @@
         <usedWith rdf:resource="http://dbpedia.org/resource/Webpack"/>
         <usedWith rdf:resource="http://dbpedia.org/resource/Grunt_(software)"/>
         <usedWith rdf:resource="http://dbpedia.org/resource/Npm_(software)"/>
-        <hasBookApi rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://api.itbook.store/1.0/search/JavaScript</hasBookApi>
+        <hasBook rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/javascript/javascript_useful_resources.htm</hasBook>
         <hasGuide rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/javascript/javascript_quick_guide.htm</hasGuide>
         <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">JavaScript</hasName>
     </owl:NamedIndividual>
@@ -962,6 +991,7 @@
     <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/JavaServer_Faces">
         <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Library"/>
         <generated rdf:resource="http://dbpedia.org/resource/Java_(programming_language)"/>
+        <hasBook rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/jsf/jsf_useful_resources.htm</hasBook>
         <hasGuide rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/jsf/jsf_quick_guide.htm</hasGuide>
         <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">jsf</hasName>
     </owl:NamedIndividual>
@@ -1011,6 +1041,7 @@
     <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Laravel">
         <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Library"/>
         <generated rdf:resource="http://dbpedia.org/resource/PHP"/>
+        <hasBook rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/laravel/laravel_useful_resources.htm</hasBook>
         <hasGuide rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/laravel/laravel_quick_guide.htm</hasGuide>
         <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">laravel</hasName>
     </owl:NamedIndividual>
@@ -1021,6 +1052,7 @@
 
     <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Linear_algebra">
         <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#BaseTheory"/>
+        <hasBook rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/discrete_mathematics/discrete_mathematics_useful_resources.htm</hasBook>
         <hasGuide rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/discrete_mathematics/discrete_mathematics_quick_guide.htm</hasGuide>
         <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">linear_algebra</hasName>
     </owl:NamedIndividual>
@@ -1031,7 +1063,7 @@
 
     <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/MATLAB">
         <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Language"/>
-        <hasBookApi rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://api.itbook.store/1.0/search/MATLAB</hasBookApi>
+        <hasBook rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/matlab/matlab_useful_resources.htm</hasBook>
         <hasGuide rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/matlab/matlab_quick_guide.htm</hasGuide>
         <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MATLAB</hasName>
     </owl:NamedIndividual>
@@ -1042,6 +1074,7 @@
 
     <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/MIPS_instruction_set">
         <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#BaseTheory"/>
+        <hasBook rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/assembly_programming/assembly_useful_resources.htm</hasBook>
         <hasGuide rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/assembly_programming/assembly_quick_guide.htm</hasGuide>
         <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mips</hasName>
     </owl:NamedIndividual>
@@ -1056,6 +1089,7 @@
         <dependsOn rdf:resource="http://dbpedia.org/resource/Database"/>
         <dependsOn rdf:resource="http://dbpedia.org/resource/Linear_algebra"/>
         <dependsOn rdf:resource="http://dbpedia.org/resource/Statistics"/>
+        <hasBook rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/machine_learning/machine_learning_useful_resources.htm</hasBook>
         <hasGuide rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/machine_learning/machine_learning_quick_guide.htm</hasGuide>
         <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ml</hasName>
     </owl:NamedIndividual>
@@ -1066,6 +1100,7 @@
 
     <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Metasploit_Project">
         <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Security"/>
+        <hasBook rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/metasploit/metasploit_useful_resources.htm</hasBook>
         <hasGuide rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/metasploit/metasploit_quick_guide.htm</hasGuide>
         <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">metasploit</hasName>
     </owl:NamedIndividual>
@@ -1094,6 +1129,7 @@
     <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Mockito">
         <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Library"/>
         <generated rdf:resource="http://dbpedia.org/resource/Java_(programming_language)"/>
+        <hasBook rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/mockito/mockito_useful_resources.htm</hasBook>
         <hasGuide rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/mockito/mockito_quick_guide.htm</hasGuide>
         <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mockito</hasName>
     </owl:NamedIndividual>
@@ -1105,6 +1141,7 @@
     <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Model_checking">
         <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#AdvancedTheory"/>
         <dependsOn rdf:resource="http://dbpedia.org/resource/Theory_of_computation"/>
+        <hasBook rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/modelling_and_simulation/modelling_and_simulation_useful_resources.htm</hasBook>
         <hasGuide rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/modelling_and_simulation/modelling_and_simulation_quick_guide.htm</hasGuide>
         <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">model_checking</hasName>
     </owl:NamedIndividual>
@@ -1198,7 +1235,7 @@
 
     <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Objective-C">
         <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Language"/>
-        <hasBookApi rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://api.itbook.store/1.0/search/Objective-C</hasBookApi>
+        <hasBook rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/objective_c/objective_c_useful_resources.htm</hasBook>
         <hasGuide rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/objective_c/objective_c_quick_guide.htm</hasGuide>
         <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Objective-C</hasName>
     </owl:NamedIndividual>
@@ -1257,6 +1294,8 @@
 
     <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Operating_system">
         <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#BaseTheory"/>
+        <hasBook rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/operating_system/os_useful_resources.htm</hasBook>
+        <hasGuide rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/operating_system/os_quick_guide.htm</hasGuide>
         <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">so</hasName>
     </owl:NamedIndividual>
     
@@ -1271,7 +1310,7 @@
         <generate rdf:resource="http://dbpedia.org/resource/Symfony"/>
         <generate rdf:resource="http://dbpedia.org/resource/Doctrine_(PHP)"/>
         <usedWith rdf:resource="http://dbpedia.org/resource/Composer_(software)"/>
-        <hasBookApi rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://api.itbook.store/1.0/search/PHP</hasBookApi>
+        <hasBook rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/php7/php7_useful_resources.htm</hasBook>
         <hasGuide rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/php7/php7_quick_guide.htm</hasGuide>
         <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Php</hasName>
     </owl:NamedIndividual>
@@ -1297,6 +1336,7 @@
         <dependsOn rdf:resource="http://dbpedia.org/resource/MIPS_instruction_set"/>
         <dependsOn rdf:resource="http://dbpedia.org/resource/Object-oriented_programming"/>
         <dependsOn rdf:resource="http://dbpedia.org/resource/Procedural_programming"/>
+        <hasBook rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/parallel_algorithm/parallel_algorithm_useful_resources.htm</hasBook>
         <hasGuide rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/parallel_algorithm/parallel_algorithm_quick_guide.htm</hasGuide>
         <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">parallel_computing</hasName>
     </owl:NamedIndividual>
@@ -1309,6 +1349,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#IntermediateTheory"/>
         <dependsOn rdf:resource="http://dbpedia.org/resource/Computer_security"/>
         <dependsOn rdf:resource="http://dbpedia.org/resource/Internet_protocol_suite"/>
+        <hasBook rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/penetration_testing/penetration_testing_useful_resources.htm</hasBook>
         <hasGuide rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/penetration_testing/penetration_testing_quick_guide.htm</hasGuide>
         <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">penetration_test</hasName>
     </owl:NamedIndividual>
@@ -1319,7 +1360,7 @@
 
     <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Perl">
         <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Language"/>
-        <hasBookApi rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://api.itbook.store/1.0/search/Perl</hasBookApi>
+        <hasBook rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/perl/perl_useful_resources.htm</hasBook>
         <hasGuide rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/perl/perl_quick_guide.htm</hasGuide>
         <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Perl</hasName>
     </owl:NamedIndividual>
@@ -1372,6 +1413,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#IntermediateTheory"/>
         <dependsOn rdf:resource="http://dbpedia.org/resource/Database"/>
         <dependsOn rdf:resource="http://dbpedia.org/resource/Object-oriented_programming"/>
+        <hasBook rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/software_quality_management/software_quality_management_useful_resources.htm</hasBook>
         <hasGuide rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/software_quality_management/software_quality_management_quick_guide.htm</hasGuide>
         <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">quality_management</hasName>
     </owl:NamedIndividual>
@@ -1383,6 +1425,7 @@
     <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/RSpec">
         <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Library"/>
         <generated rdf:resource="http://dbpedia.org/resource/Ruby_(programming_language)"/>
+        <hasBook rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/rspec/rspec_useful_resources.htm</hasBook>
         <hasGuide rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/rspec/rspec_quick_guide.htm</hasGuide>
         <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RSpec</hasName>
     </owl:NamedIndividual>
@@ -1413,6 +1456,7 @@
     <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Ruby_on_Rails">
         <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Library"/>
         <generated rdf:resource="http://dbpedia.org/resource/Ruby_(programming_language)"/>
+        <hasBook rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/ruby-on-rails/rails-resources.htm</hasBook>
         <hasGuide rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/ruby-on-rails/rails-quick-guide.htm</hasGuide>
         <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ruby_on_rails</hasName>
     </owl:NamedIndividual>
@@ -1423,7 +1467,7 @@
 
     <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/SQL">
         <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Language"/>
-        <hasBookApi rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://api.itbook.store/1.0/search/SQL</hasBookApi>
+        <hasBook rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/sql/sql-useful-resources.htm</hasBook>
         <hasGuide rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/sql/sql-quick-guide.htm</hasGuide>
         <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SQL</hasName>
     </owl:NamedIndividual>
@@ -1435,6 +1479,7 @@
     <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Scikit-learn">
         <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Library"/>
         <generated rdf:resource="http://dbpedia.org/resource/Python_(programming_language)"/>
+        <hasBook rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/machine_learning_with_python/machine_learning_with_python_useful_resources.htm</hasBook>
         <hasGuide rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/machine_learning_with_python/machine_learning_with_python_quick_guide.htm</hasGuide>
         <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Scikit-learn</hasName>
     </owl:NamedIndividual>
@@ -1487,6 +1532,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#AdvancedTheory"/>
         <dependsOn rdf:resource="http://dbpedia.org/resource/Parallel_computing"/>
         <dependsOn rdf:resource="http://dbpedia.org/resource/Wireless_network"/>
+        <hasBook rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/aws_lambda/aws_lambda_useful_resources.htm</hasBook>
         <hasGuide rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/aws_lambda/aws_lambda_quick_guide.htm</hasGuide>
         <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">serverless_computing</hasName>
     </owl:NamedIndividual>
@@ -1511,6 +1557,7 @@
         <dependsOn rdf:resource="http://dbpedia.org/resource/Data_structure"/>
         <dependsOn rdf:resource="http://dbpedia.org/resource/Database"/>
         <dependsOn rdf:resource="http://dbpedia.org/resource/Object-oriented_programming"/>
+        <hasBook rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/software_engineering/software_engineering_useful_resources.htm</hasBook>
         <hasGuide rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/software_engineering/software_engineering_quick_guide.htm</hasGuide>
         <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">software_engineering</hasName>
     </owl:NamedIndividual>
@@ -1523,6 +1570,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#AdvancedTheory"/>
         <dependsOn rdf:resource="http://dbpedia.org/resource/Quality_management"/>
         <dependsOn rdf:resource="http://dbpedia.org/resource/Software_engineering"/>
+        <hasBook rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/management_concepts/management_concepts_useful_resources.htm</hasBook>
         <hasGuide rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/management_concepts/management_concepts_quick_guide.htm</hasGuide>
         <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">spm</hasName>
     </owl:NamedIndividual>
@@ -1550,6 +1598,7 @@
     <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Spring_Framework">
         <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Library"/>
         <generated rdf:resource="http://dbpedia.org/resource/Java_(programming_language)"/>
+        <hasBook rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/spring/spring_useful_resources.htm</hasBook>
         <hasGuide rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/spring/spring_quick_guide.htm</hasGuide>
         <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">spring</hasName>
     </owl:NamedIndividual>
@@ -1617,6 +1666,7 @@
     <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Symfony">
         <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Library"/>
         <generated rdf:resource="http://dbpedia.org/resource/PHP"/>
+        <hasBook rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/symfony/symfony_useful_resources.htm</hasBook>
         <hasGuide rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/symfony/symfony_quick_guide.htm</hasGuide>
         <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">symfony</hasName>
     </owl:NamedIndividual>
@@ -1658,6 +1708,7 @@
     <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/TensorFlow">
         <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Library"/>
         <generated rdf:resource="http://dbpedia.org/resource/C++"/>
+        <hasBook rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/tensorflow/tensorflow_useful_resources.htm</hasBook>
         <hasGuide rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/tensorflow/tensorflow_quick_guide.htm</hasGuide>
         <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tensorFlow</hasName>
     </owl:NamedIndividual>
@@ -1670,6 +1721,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#IntermediateTheory"/>
         <dependsOn rdf:resource="http://dbpedia.org/resource/Data_structure"/>
         <dependsOn rdf:resource="http://dbpedia.org/resource/Linear_algebra"/>
+        <hasBook rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/automata_theory/automata_theory_useful_resources.htm</hasBook>
         <hasGuide rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/automata_theory/automata_theory_quick_guide.htm</hasGuide>
         <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">theory_of_computation</hasName>
     </owl:NamedIndividual>
@@ -1690,7 +1742,7 @@
 
     <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Visual_Basic">
         <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Language"/>
-        <hasBookApi rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://api.itbook.store/1.0/search/visual%20Basic</hasBookApi>
+        <hasBook rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/vb.net/vb.net_useful_resources.htm</hasBook>
         <hasGuide rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/vb.net/vb.net_quick_guide.htm</hasGuide>
         <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VisualBasic</hasName>
     </owl:NamedIndividual>
@@ -1720,6 +1772,7 @@
     <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Wireless_network">
         <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#IntermediateTheory"/>
         <dependsOn rdf:resource="http://dbpedia.org/resource/Internet_protocol_suite"/>
+        <hasBook rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/wireless_communication/wireless_communication_useful_resources.htm</hasBook>
         <hasGuide rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/wireless_communication/wireless_communication_quick_guide.htm</hasGuide>
         <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wireless</hasName>
     </owl:NamedIndividual>
@@ -1740,7 +1793,7 @@
 
     <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/XML">
         <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Language"/>
-        <hasBookApi rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://api.itbook.store/1.0/search/XML</hasBookApi>
+        <hasBook rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://api.itbook.store/1.0/search/XML</hasBook>
         <hasGuide rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/xml/xml_quick_guide.htm</hasGuide>
         <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">XML</hasName>
     </owl:NamedIndividual>
@@ -1845,6 +1898,7 @@
     <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Bootstrap_(front-end_framework)">
         <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Library"/>
         <generated rdf:resource="http://dbpedia.org/resource/Cascading_Style_Sheets"/>
+        <hasBook rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/bootstrap4/bootstrap4_useful_resources.htm</hasBook>
         <hasGuide rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/bootstrap4/bootstrap4_quick_guide.htm</hasGuide>
         <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bootstrap</hasName>
     </owl:NamedIndividual>
@@ -1870,6 +1924,7 @@
         <usedWith rdf:resource="http://dbpedia.org/resource/Clang"/>
         <usedWith rdf:resource="http://dbpedia.org/resource/GNU_Compiler_Collection"/>
         <usedWith rdf:resource="http://dbpedia.org/resource/Make_(software)"/>
+        <hasBook rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/cplusplus/cpp_useful_resources.htm</hasBook>
         <hasGuide rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/cplusplus/cpp_quick_guide.htm</hasGuide>
         <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">C++</hasName>
     </owl:NamedIndividual>
@@ -1885,6 +1940,7 @@
         <usedWith rdf:resource="http://dbpedia.org/resource/GNU_Compiler_Collection"/>
         <usedWith rdf:resource="http://dbpedia.org/resource/NAnt"/>
         <usedWith rdf:resource="http://dbpedia.org/resource/NuGet"/>
+        <hasBook rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/csharp/csharp_useful_resources.htm</hasBook>
         <hasGuide rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/csharp/csharp_quick_guide.htm</hasGuide>
         <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">C#</hasName>
     </owl:NamedIndividual>
@@ -1904,6 +1960,7 @@
 
     <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/D_(programming_language)">
         <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Language"/>
+        <hasBook rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/d_programming/d_programming_useful_resources.htm</hasBook>
         <hasGuide rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/d_programming/d_programming_quick_guide.htm</hasGuide>
         <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">D</hasName>
     </owl:NamedIndividual>
@@ -1914,7 +1971,7 @@
 
     <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Dart_(programming_language)">
         <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Language"/>
-        <hasBookApi rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://api.itbook.store/1.0/search/Dart</hasBookApi>
+        <hasBook rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/dart_programming/dart_programming_useful_resources.htm</hasBook>
         <hasGuide rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/dart_programming/dart_programming_quick_guide.htm</hasGuide>
         <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dart</hasName>
     </owl:NamedIndividual>
@@ -1926,6 +1983,7 @@
     <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Django_(web_framework)">
         <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Library"/>
         <generated rdf:resource="http://dbpedia.org/resource/Python_(programming_language)"/>
+        <hasBook rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/django/django_useful_resources.htm</hasBook>
         <hasGuide rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/django/django_quick_guide.htm</hasGuide>
         <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">django</hasName>
     </owl:NamedIndividual>
@@ -1936,6 +1994,7 @@
 
     <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Docker_(software)">
         <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Deploy"/>
+        <hasBook rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/docker/docker_useful_resources.htm</hasBook>
         <hasGuide rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/docker/docker_quick_guide.htm</hasGuide>
         <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">docker</hasName>
     </owl:NamedIndividual>
@@ -1970,7 +2029,7 @@
 
     <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Elixir_(programming_language)">
         <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Language"/>
-        <hasBookApi rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://api.itbook.store/1.0/search/Elixir</hasBookApi>
+        <hasBook rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/elixir/elixir_useful_resources.htm</hasBook>
         <hasGuide rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/elixir/elixir_quick_guide.htm</hasGuide>
         <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Elixir</hasName>
     </owl:NamedIndividual>
@@ -1991,6 +2050,7 @@
     <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Flask_(web_framework)">
         <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Library"/>
         <generated rdf:resource="http://dbpedia.org/resource/Python_(programming_language)"/>
+        <hasBook rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/flask/flask_useful_resources.htm</hasBook>
         <hasGuide rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/flask/flask_quick_guide.htm</hasGuide>
         <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">flask</hasName>
     </owl:NamedIndividual>
@@ -2002,6 +2062,7 @@
     <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Foundation_(framework)">
         <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Library"/>
         <generated rdf:resource="http://dbpedia.org/resource/Cascading_Style_Sheets"/>
+        <hasBook rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/foundation/foundation_useful_resources.htm</hasBook>
         <hasGuide rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/foundation/foundation_quick_guide.htm</hasGuide>
         <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">foundation</hasName>
     </owl:NamedIndividual>
@@ -2022,6 +2083,7 @@
 
     <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Go_(programming_language)">
         <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Language"/>
+        <hasBook rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/go/go_useful_resources.htm</hasBook>
         <hasGuide rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/go/go_quick_guide.htm</hasGuide>
         <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Go</hasName>
     </owl:NamedIndividual>
@@ -2032,7 +2094,7 @@
 
     <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Groovy_(programming_language)">
         <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Language"/>
-        <hasBookApi rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://api.itbook.store/1.0/search/Groovy</hasBookApi>
+        <hasBook rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/groovy/groovy_useful_resources.htm</hasBook>
         <hasGuide rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/groovy/groovy_quick_guide.htm</hasGuide>
         <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Groovy</hasName>
     </owl:NamedIndividual>
@@ -2043,6 +2105,7 @@
 
     <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Grunt_(software)">
         <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Coding"/>
+        <hasBook rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/grunt/grunt_useful_resources.htm</hasBook>
         <hasGuide rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/grunt/grunt_quick_guide.htm</hasGuide>
         <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">grunt</hasName>
     </owl:NamedIndividual>
@@ -2053,7 +2116,7 @@
 
     <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Haskell_(programming_language)">
         <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Language"/>
-        <hasBookApi rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://api.itbook.store/1.0/search/Haskell</hasBookApi>
+        <hasBook rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/haskell/haskell_useful_resources.htm</hasBook>
         <hasGuide rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/haskell/haskell_quick_guide.htm</hasGuide>
         <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Haskell</hasName>
     </owl:NamedIndividual>
@@ -2065,6 +2128,7 @@
     <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Hibernate_(framework)">
         <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Library"/>
         <generated rdf:resource="http://dbpedia.org/resource/Java_(programming_language)"/>
+        <hasBook rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/hibernate/hibernate_useful_resources.htm</hasBook>
         <hasGuide rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/hibernate/hibernate_quick_guide.htm</hasGuide>
         <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hibernate</hasName>
     </owl:NamedIndividual>
@@ -2092,7 +2156,7 @@
         <usedWith rdf:resource="http://dbpedia.org/resource/Apache_Ant"/>
         <usedWith rdf:resource="http://dbpedia.org/resource/Apache_Maven"/>
         <usedWith rdf:resource="http://dbpedia.org/resource/Gradle"/>
-        <hasBookApi rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://api.itbook.store/1.0/search/Java%20language</hasBookApi>
+        <hasBook rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/java/java_useful_resources.htm</hasBook>
         <hasGuide rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/java/java_quick_guide.htm</hasGuide>
         <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Java</hasName>
     </owl:NamedIndividual>
@@ -2103,7 +2167,7 @@
 
     <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Julia_(programming_language)">
         <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Language"/>
-        <hasBookApi rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://api.itbook.store/1.0/search/Julia</hasBookApi>
+        <hasBook rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://api.itbook.store/1.0/search/Julia</hasBook>
         <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Julia</hasName>
     </owl:NamedIndividual>
     
@@ -2116,7 +2180,7 @@
         <usedWith rdf:resource="http://dbpedia.org/resource/Apache_Maven"/>
         <usedWith rdf:resource="http://dbpedia.org/resource/Gradle"/>
         <usedWith rdf:resource="http://dbpedia.org/resource/NAnt"/>
-        <hasBookApi rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://api.itbook.store/1.0/search/Kotlin</hasBookApi>
+        <hasBook rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/kotlin/kotlin_useful_resources.htm</hasBook>
         <hasGuide rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/kotlin/kotlin_quick_guide.htm</hasGuide>
         <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kotlin</hasName>
     </owl:NamedIndividual>
@@ -2128,6 +2192,7 @@
     <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Less_(stylesheet_language)">
         <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Language"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Tool"/>
+        <hasBook rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/less/less_useful_resources.htm</hasBook>
         <hasGuide rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/less/less_quick_guide.htm</hasGuide>
         <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Less</hasName>
     </owl:NamedIndividual>
@@ -2138,7 +2203,7 @@
 
     <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Lua_(programming_language)">
         <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Language"/>
-        <hasBookApi rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://api.itbook.store/1.0/search/Lua</hasBookApi>
+        <hasBook rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/lua/lua_useful_resources.htm</hasBook>
         <hasGuide rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/lua/lua_quick_guide.htm</hasGuide>
         <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lua</hasName>
     </owl:NamedIndividual>
@@ -2149,6 +2214,7 @@
 
     <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Make_(software)">
         <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Coding"/>
+        <hasBook rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/makefile/makefile_useful_resources.htm</hasBook>
         <hasGuide rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/makefile/makefile_quick_guide.htm</hasGuide>
         <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">make</hasName>
     </owl:NamedIndividual>
@@ -2160,6 +2226,7 @@
     <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Meteor_(web_framework)">
         <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Library"/>
         <generated rdf:resource="http://dbpedia.org/resource/JavaScript"/>
+        <hasBook rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/meteor/meteor_useful_resources.htm</hasBook>
         <hasGuide rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.tutorialspoint.com/meteor/meteor_quick_guide.htm</hasGuide>
         <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">meteor</hasName>
     </owl:NamedIndividual>
@@ -2261,7 +2328,7 @@
         <generate rdf:resource="http://dbpedia.org/resource/Flask_(web_framework)"/>
         <usedWith rdf:resource="http://dbpedia.org/resource/Anaconda_(Python_distribution)"/>
         <usedWith rdf:resource="http://dbpedia.org/resource/Pip_(package_manager)"/>
-        <hasBookApi rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://api.itbook.store/1.0/search/Python</hasBookApi>
+        <hasBook rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/python/python_useful_resources.htm</hasBook>
         <hasGuide rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/python/python_quick_guide.htm</hasGuide>
         <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Python</hasName>
     </owl:NamedIndividual>
@@ -2283,6 +2350,7 @@
     <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/R_(programming_language)">
         <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Language"/>
         <usedWith rdf:resource="http://dbpedia.org/resource/Anaconda_(Python_distribution)"/>
+        <hasBook rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/r/r_useful_resources.htm</hasBook>
         <hasGuide rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/r/r_quick_guide.htm</hasGuide>
         <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">R</hasName>
     </owl:NamedIndividual>
@@ -2303,6 +2371,7 @@
     <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/React_(JavaScript_library)">
         <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Library"/>
         <generated rdf:resource="http://dbpedia.org/resource/JavaScript"/>
+        <hasBook rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/reactjs/reactjs_useful_resources.htm</hasBook>
         <hasGuide rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/reactjs/reactjs_quick_guide.htm</hasGuide>
         <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">react</hasName>
     </owl:NamedIndividual>
@@ -2318,7 +2387,7 @@
         <generate rdf:resource="http://dbpedia.org/resource/Ruby_on_Rails"/>
         <usedWith rdf:resource="http://dbpedia.org/resource/RubyGems"/>
         <usedWith rdf:resource="http://dbpedia.org/resource/Rake_(software)"/>
-        <hasBookApi rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://api.itbook.store/1.0/search/Ruby</hasBookApi>
+        <hasBook rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/ruby/ruby_resources.htm</hasBook>
         <hasGuide rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/ruby/ruby_quick_guide.htm</hasGuide>
         <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ruby</hasName>
     </owl:NamedIndividual>
@@ -2329,7 +2398,7 @@
 
     <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Rust_(programming_language)">
         <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Language"/>
-        <hasBookApi rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://api.itbook.store/1.0/search/Rust</hasBookApi>
+        <hasBook rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/rust/rust_useful_resources.htm</hasBook>
         <hasGuide rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/rust/rust_quick_guide.htm</hasGuide>
         <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rust</hasName>
     </owl:NamedIndividual>
@@ -2341,6 +2410,7 @@
     <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Sass_(stylesheet_language)">
         <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Language"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Tool"/>
+        <hasBook rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/sass/sass_useful_resources.htm</hasBook>
         <hasGuide rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/sass/sass_quick_guide.htm</hasGuide>
         <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sass</hasName>
     </owl:NamedIndividual>
@@ -2354,7 +2424,7 @@
         <usedWith rdf:resource="http://dbpedia.org/resource/Apache_Ant"/>
         <usedWith rdf:resource="http://dbpedia.org/resource/Apache_Maven"/>
         <usedWith rdf:resource="http://dbpedia.org/resource/Gradle"/>
-        <hasBookApi rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://api.itbook.store/1.0/search/Scala</hasBookApi>
+        <hasBook rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/scala/scala_useful_resources.htm</hasBook>
         <hasGuide rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/scala/scala_quick_guide.htm</hasGuide>
         <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Scala</hasName>
     </owl:NamedIndividual>
@@ -2375,6 +2445,7 @@
     <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Storm_(event_processor)">
         <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Library"/>
         <generated rdf:resource="http://dbpedia.org/resource/Java_(programming_language)"/>
+        <hasBook rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/apache_storm/apache_storm_quick_guide.htm</hasBook>
         <hasGuide rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/apache_storm/apache_storm_quick_guide.htm</hasGuide>
         <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">storm</hasName>
     </owl:NamedIndividual>
@@ -2385,7 +2456,7 @@
 
     <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Swift_(programming_language)">
         <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Language"/>
-        <hasBookApi rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://api.itbook.store/1.0/search/Swift</hasBookApi>
+        <hasBook rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/swift/swift_useful_resources.htm</hasBook>
         <hasGuide rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/swift/swift_quick_guide.htm</hasGuide>
         <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Swift</hasName>
     </owl:NamedIndividual>
