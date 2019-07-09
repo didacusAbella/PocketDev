@@ -1993,7 +1993,6 @@
 
     <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Julia_(programming_language)">
         <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Language"/>
-        <hasBook rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://api.itbook.store/1.0/search/Julia</hasBook>
         <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Julia</hasName>
     </owl:NamedIndividual>
     
