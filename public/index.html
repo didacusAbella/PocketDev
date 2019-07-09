@@ -35,34 +35,31 @@
           <ul class="menu-list">
             <li>
               <div class="select is-primary is-fullwidth">
-                <select data-bind="options: careers, value: career, event: { change: fetchPath}"></select>
+                <select data-bind="options: careers, value: career, event: { change: fetchPath }"></select>
               </div>
             </li>
           </ul>
           <p class="menu-label">Theory Educational Path</p>
           <ul class="menu-list">
-            <li>
-              <a href="#">Base</a>
-              <ul class="menu-list" data-bind="foreach: educationalPath.base">
-                <li data-bind="text: theoryName.value"></li>
+            <li>Base
+              <ul class="menu-list" data-bind="foreach: baseTheory">
+                <li><a data-bind="text: $data.replace('http://dbpedia.org/resource/', '')" href="#"></a></li>
               </ul>
             </li>
-            <li>
-              <a href="#">Intermediate</a>
-              <ul class="menu-list" data-bind="foreach: educationalPath.intermediate">
-                <li data-bind="text: theoryName.value"></li>
+            <li>Intermediate
+              <ul class="menu-list" data-bind="foreach: intermediateTheory">
+                <li><a data-bind="text: $data.replace('http://dbpedia.org/resource/', '')" href="#"></a></li>
               </ul>
             </li>
-            <li>
-              <a href="#">Advanced</a>
-              <ul class="menu-list" data-bind="foreach: educationalPath.advanced">
-                <li data-bind="text: theoryName.value"></li>
+            <li>Advanced
+              <ul class="menu-list" data-bind="foreach: advancedTheory">
+                <li><a data-bind="text: $data.replace('http://dbpedia.org/resource/', '')" href="#"></a></li>
               </ul>
             </li>
           </ul>
           <p class="menu-label">Practice Educational Path</p>
-          <ul class="menu-list">
-            <li><a>Some Tool or Language</a></li>
+          <ul class="menu-list" data-bind="foreach: praticalPath">
+            <li><a data-bind="text: $data"></a></li>
           </ul>
         </aside>
       </div>
@@ -71,11 +68,14 @@
       <article class="tile is-child box">
         <div class="tabs is-centered">
           <ul>
-            <li class="is-active"><a>General Info</a></li>
-            <li><a>Books</a></li>
-            <li>Guides</li>
+            <li data-bind="css: {'is-active': tab() === 0}"><a data-bind="click: changeTab.bind($data, 0)">Info</a></li>
+            <li data-bind="css: {'is-active': tab() === 1}"><a data-bind="click: changeTab.bind($data, 1)">Books</a></li>
+            <li data-bind="css: {'is-active': tab() === 2}"><a data-bind="click: changeTab.bind($data, 2)">Guide</a></li>
           </ul>
         </div>
+        <div data-bind="visible: tab() === 0">primo</div>
+        <div data-bind="visible: tab() === 1">secondo</div>
+        <div data-bind="visible: tab() === 2">terzo</div>
       </article>
     </section>
   </main>
@@ -84,7 +84,7 @@
         <div class="content">
           <h3 class="subtitle">About The Authors</h3>
           <p class="heading">
-              <a href="https://didacusabella.github.io">Diego Avella</a> and <a href="https://cicciotecchio.github.io">Francesco Vicidomini</a>
+              <a href="https://didacusabella.github.io">Diego Avella</a> and <a href="https://cicciotecchio.github.io/CiccioTecchio.io">Francesco Vicidomini</a>
               are two bachelor's degree students from the University of Salerno (Italy). They attend master's degree in Computer Science
               in Software Engineering with particular interest in Project Management Activities, Software Testing Techniques and Architectural Patterns.
           </p>

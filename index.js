@@ -7,7 +7,7 @@ const path = require("./routes/path/path");
 const bodyparser = require("body-parser");
 
 application.use(bodyparser.urlencoded({extended: true}));
-application.use(bodyparser.json());
+application.use(bodyparser.json({ type: "application/json"}));
 application.use(logger('dev'));
 application.use(express.static('public'));
 

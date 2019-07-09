@@ -34,8 +34,8 @@ router.get("/practice/:name", function(req, res){
     .catch(err => res.json(err));
 })
 
-router.get("/info/:name", function(req, res){
-    localClient.query(query.getInfoByPath(req.params.name))
+router.post("/info", function(req, res){
+    localClient.query(query.getInfoByPath(req.body.name))
     .execute()
     .then(result => res.json(formatter(result)))
     .catch(err => res.json(err));

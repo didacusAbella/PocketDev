@@ -49,13 +49,12 @@ function getTheoryByName(name){
 }
 
 function getInfoByPath(name){
-    return `SELECT ?iri ?type ?abs ?book ?guide WHERE {
-        ?iri rdf:type ?type ;
-          pd:hasName "${name}".
-      OPTIONAL  {?iri pd:hasBook ?book}
-      OPTIONAL  {?iri pd:hasGuide ?guide}
+    return `SELECT ?type ?abs ?book ?guide WHERE {
+        <${name}> rdf:type ?type .
+      OPTIONAL  {<${name}> pd:hasBook ?book}
+      OPTIONAL  {<${name}> pd:hasGuide ?guide}
       SERVICE <${endpoints.dbpedia}>{
-      ?iri dbo:abstract ?abs
+      <${name}> dbo:abstract ?abs
       }
       FILTER (?type != owl:NamedIndividual)
       FILTER langMatches(lang(?abs),"en")
