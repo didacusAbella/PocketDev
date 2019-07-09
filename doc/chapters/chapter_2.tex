@@ -1,12 +1,12 @@
 \section{Design}
-In questa fase si descrive la fase di progettazione del sistema dal punto di vista del design, costruendo il database, elencando le tecnologie utilizzate e presentando un architettura del completa del sistema.
+In questa fase si descrive la fase di progettazione del sistema dal punto di vista del design, costruendo il database, elencando le tecnologie utilizzate e presentando un'architettura completa del sistema.
 \subsection{Architettura del Sistema}
-PocketDev presenta un'architettura client server in 3 tier. Il primo è rappresentato dal database TDB adatto a memorizzare triplette in formato RDF in maniera efficiente e compatta. Nel secondo abbiamo la logica di business suddivisa in 2 componenti principali: il componente \textbf{Fuseki} che interroga il Database tramite Query SPARQL restituendo dei JSON e il \textbf{Server} che prende questi risultati, li formatta e li spedisce al terzo tier. Quest'ultimo comunica con il secondo con un interfaccia REST sempre tramite JSON e il componente \textbf{Browser} li renderizza a schermo. 
+PocketDev presenta un'architettura client server in 3 tier. Il primo è rappresentato dal database TDB adatto a memorizzare triplette RDF in maniera efficiente e compatta. Nel secondo abbiamo la logica di business suddivisa in 2 componenti principali: il componente \textbf{Fuseki} che interroga il Database tramite SPARQL restituendo dei JSON e il \textbf{Server} che prende questi risultati, li formatta e li spedisce al terzo tier. Quest'ultimo comunica con il secondo con un' interfaccia REST sempre tramite JSON e il componente \textbf{Browser} li mostra a schermo. 
 \begin{figure}[H]
  \includegraphics[scale=.6]{architecture.png}
 \end{figure}
 \subsection{Definizione del Database}
-Il database non è il solito database relazionale, ma un database di tipo semantico dove le informazioni vengono memorizzate attraverso triplette di concetti. Queste triplette sono composte da 3 componenti: soggetto, predicato ed oggetto. Alla base dell'ontologia di PocketDev ci sono i seguenti concetti:
+Il database è di tipo semantico dove le informazioni vengono memorizzate attraverso triplette di concetti. Queste sono composte da 3 componenti: soggetto, predicato ed oggetto. Alla base dell'ontologia di PocketDev ci sono i seguenti concetti:
 \begin{enumerate}
  \item IT\_Career: è il concetto che esprime la carriera universitaria;
  \item Educational\_Path: è il percorso formativo che un utente segue per prepararsi alla carriera desiderata;
@@ -14,13 +14,11 @@ Il database non è il solito database relazionale, ma un database di tipo semant
  \item PraticalEducationalPath: insieme di elementi di Educational\_Path rigurdanti aspetti pratici del percorso formativo. Si divide a sua volta in:
  \begin{enumerate}
   \item Language: insieme di linguaggi di programmazione;
-  \item Editor: strumenti di editing che supportano vari tipi di linguaggi;
   \item Coding: strumenti di support alla fase di coding;
   \item Design: strumenti di supporto al design;
-  \item Versioning: strumnti di supporto al versioning;
+  \item Versioning: strumenti di supporto al versioning;
   \item Library: insieme di librerie famose;
  \end{enumerate}
- \item support: funzione che associa un editor ad uno o più linguaggi di programmazione.
  \item dependsOn: funzione che associa un concetto teorico ad un altro;
  \item generated: funzione che associa una linguaggio ad una libreria.
  \item follow: funzione che associa una carriera ad un centto teorico avanzato.
