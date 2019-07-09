@@ -75,15 +75,6 @@
     
 
 
-    <!-- http://www.semanticweb.org/pocketdev#support -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pocketdev#support">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/pocketdev#Editor"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/pocketdev#Language"/>
-    </owl:ObjectProperty>
-    
-
-
     <!-- http://www.semanticweb.org/pocketdev#usedWith -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/pocketdev#usedWith">
@@ -180,14 +171,6 @@
     <!-- http://www.semanticweb.org/pocketdev#Design -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/pocketdev#Design">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pocketdev#Tool"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/pocketdev#Editor -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/pocketdev#Editor">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/pocketdev#Tool"/>
     </owl:Class>
     
@@ -338,10 +321,6 @@
     <!-- http://dbpedia.org/resource/Android_Studio -->
 
     <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Android_Studio">
-        <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Editor"/>
-        <support rdf:resource="http://dbpedia.org/resource/XML"/>
-        <support rdf:resource="http://dbpedia.org/resource/Java_(programming_language)"/>
-        <support rdf:resource="http://dbpedia.org/resource/Kotlin_(programming_language)"/>
         <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">android_studio</hasName>
     </owl:NamedIndividual>
     
@@ -715,34 +694,6 @@
     <!-- http://dbpedia.org/resource/Emacs -->
 
     <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Emacs">
-        <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Editor"/>
-        <support rdf:resource="http://dbpedia.org/resource/Cascading_Style_Sheets"/>
-        <support rdf:resource="http://dbpedia.org/resource/Fortran"/>
-        <support rdf:resource="http://dbpedia.org/resource/HTML5"/>
-        <support rdf:resource="http://dbpedia.org/resource/JavaScript"/>
-        <support rdf:resource="http://dbpedia.org/resource/Objective-C"/>
-        <support rdf:resource="http://dbpedia.org/resource/PHP"/>
-        <support rdf:resource="http://dbpedia.org/resource/Perl"/>
-        <support rdf:resource="http://dbpedia.org/resource/SQL"/>
-        <support rdf:resource="http://dbpedia.org/resource/Visual_Basic"/>
-        <support rdf:resource="http://dbpedia.org/resource/XML"/>
-        <support rdf:resource="http://dbpedia.org/resource/C++"/>
-        <support rdf:resource="http://dbpedia.org/resource/D_(programming_language)"/>
-        <support rdf:resource="http://dbpedia.org/resource/Dart_(programming_language)"/>
-        <support rdf:resource="http://dbpedia.org/resource/Elixir_(programming_language)"/>
-        <support rdf:resource="http://dbpedia.org/resource/Go_(programming_language)"/>
-        <support rdf:resource="http://dbpedia.org/resource/Groovy_(programming_language)"/>
-        <support rdf:resource="http://dbpedia.org/resource/Haskell_(programming_language)"/>
-        <support rdf:resource="http://dbpedia.org/resource/Java_(programming_language)"/>
-        <support rdf:resource="http://dbpedia.org/resource/Julia_(programming_language)"/>
-        <support rdf:resource="http://dbpedia.org/resource/Less_(stylesheet_language)"/>
-        <support rdf:resource="http://dbpedia.org/resource/Lua_(programming_language)"/>
-        <support rdf:resource="http://dbpedia.org/resource/Python_(programming_language)"/>
-        <support rdf:resource="http://dbpedia.org/resource/R_(programming_language)"/>
-        <support rdf:resource="http://dbpedia.org/resource/Ruby_(programming_language)"/>
-        <support rdf:resource="http://dbpedia.org/resource/Rust_(programming_language)"/>
-        <support rdf:resource="http://dbpedia.org/resource/Sass_(stylesheet_language)"/>
-        <support rdf:resource="http://dbpedia.org/resource/Scala_(programming_language)"/>
         <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">emacs</hasName>
     </owl:NamedIndividual>
     
@@ -831,35 +782,6 @@
     <!-- http://dbpedia.org/resource/GNU_nano -->
 
     <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/GNU_nano">
-        <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Editor"/>
-        <support rdf:resource="http://dbpedia.org/resource/Cascading_Style_Sheets"/>
-        <support rdf:resource="http://dbpedia.org/resource/Clojure"/>
-        <support rdf:resource="http://dbpedia.org/resource/Fortran"/>
-        <support rdf:resource="http://dbpedia.org/resource/HTML5"/>
-        <support rdf:resource="http://dbpedia.org/resource/JavaScript"/>
-        <support rdf:resource="http://dbpedia.org/resource/Objective-C"/>
-        <support rdf:resource="http://dbpedia.org/resource/PHP"/>
-        <support rdf:resource="http://dbpedia.org/resource/Perl"/>
-        <support rdf:resource="http://dbpedia.org/resource/SQL"/>
-        <support rdf:resource="http://dbpedia.org/resource/Visual_Basic"/>
-        <support rdf:resource="http://dbpedia.org/resource/XML"/>
-        <support rdf:resource="http://dbpedia.org/resource/C++"/>
-        <support rdf:resource="http://dbpedia.org/resource/C_Sharp_(programming_language)"/>
-        <support rdf:resource="http://dbpedia.org/resource/D_(programming_language)"/>
-        <support rdf:resource="http://dbpedia.org/resource/Dart_(programming_language)"/>
-        <support rdf:resource="http://dbpedia.org/resource/Elixir_(programming_language)"/>
-        <support rdf:resource="http://dbpedia.org/resource/Go_(programming_language)"/>
-        <support rdf:resource="http://dbpedia.org/resource/Groovy_(programming_language)"/>
-        <support rdf:resource="http://dbpedia.org/resource/Haskell_(programming_language)"/>
-        <support rdf:resource="http://dbpedia.org/resource/Julia_(programming_language)"/>
-        <support rdf:resource="http://dbpedia.org/resource/Less_(stylesheet_language)"/>
-        <support rdf:resource="http://dbpedia.org/resource/Lua_(programming_language)"/>
-        <support rdf:resource="http://dbpedia.org/resource/Python_(programming_language)"/>
-        <support rdf:resource="http://dbpedia.org/resource/R_(programming_language)"/>
-        <support rdf:resource="http://dbpedia.org/resource/Ruby_(programming_language)"/>
-        <support rdf:resource="http://dbpedia.org/resource/Rust_(programming_language)"/>
-        <support rdf:resource="http://dbpedia.org/resource/Sass_(stylesheet_language)"/>
-        <support rdf:resource="http://dbpedia.org/resource/Scala_(programming_language)"/>
         <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nano</hasName>
     </owl:NamedIndividual>
     
@@ -901,19 +823,6 @@
     <!-- http://dbpedia.org/resource/IntelliJ_IDEA -->
 
     <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/IntelliJ_IDEA">
-        <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Editor"/>
-        <support rdf:resource="http://dbpedia.org/resource/Cascading_Style_Sheets"/>
-        <support rdf:resource="http://dbpedia.org/resource/JavaScript"/>
-        <support rdf:resource="http://dbpedia.org/resource/PHP"/>
-        <support rdf:resource="http://dbpedia.org/resource/SQL"/>
-        <support rdf:resource="http://dbpedia.org/resource/XML"/>
-        <support rdf:resource="http://dbpedia.org/resource/C++"/>
-        <support rdf:resource="http://dbpedia.org/resource/C_Sharp_(programming_language)"/>
-        <support rdf:resource="http://dbpedia.org/resource/Go_(programming_language)"/>
-        <support rdf:resource="http://dbpedia.org/resource/Java_(programming_language)"/>
-        <support rdf:resource="http://dbpedia.org/resource/Python_(programming_language)"/>
-        <support rdf:resource="http://dbpedia.org/resource/Ruby_(programming_language)"/>
-        <support rdf:resource="http://dbpedia.org/resource/Sass_(stylesheet_language)"/>
         <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IntelliJ_IDEA</hasName>
     </owl:NamedIndividual>
     
@@ -1110,15 +1019,6 @@
     <!-- http://dbpedia.org/resource/Microsoft_Visual_Studio -->
 
     <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Microsoft_Visual_Studio">
-        <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Editor"/>
-        <support rdf:resource="http://dbpedia.org/resource/Cascading_Style_Sheets"/>
-        <support rdf:resource="http://dbpedia.org/resource/Fortran"/>
-        <support rdf:resource="http://dbpedia.org/resource/JavaScript"/>
-        <support rdf:resource="http://dbpedia.org/resource/Visual_Basic"/>
-        <support rdf:resource="http://dbpedia.org/resource/XML"/>
-        <support rdf:resource="http://dbpedia.org/resource/C++"/>
-        <support rdf:resource="http://dbpedia.org/resource/C_Sharp_(programming_language)"/>
-        <support rdf:resource="http://dbpedia.org/resource/Python_(programming_language)"/>
         <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Microsoft_Visual_Studio</hasName>
     </owl:NamedIndividual>
     
@@ -1152,9 +1052,7 @@
 
     <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/MySQL_Workbench">
         <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Design"/>
-        <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Editor"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Tool"/>
-        <support rdf:resource="http://dbpedia.org/resource/SQL"/>
         <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MySQL_Workbench</hasName>
     </owl:NamedIndividual>
     
@@ -1181,11 +1079,6 @@
     <!-- http://dbpedia.org/resource/NetBeans -->
 
     <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/NetBeans">
-        <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Editor"/>
-        <support rdf:resource="http://dbpedia.org/resource/Cascading_Style_Sheets"/>
-        <support rdf:resource="http://dbpedia.org/resource/HTML5"/>
-        <support rdf:resource="http://dbpedia.org/resource/PHP"/>
-        <support rdf:resource="http://dbpedia.org/resource/Java_(programming_language)"/>
         <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NetBeans</hasName>
     </owl:NamedIndividual>
     
@@ -1436,8 +1329,6 @@
     <!-- http://dbpedia.org/resource/RStudio -->
 
     <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/RStudio">
-        <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Editor"/>
-        <support rdf:resource="http://dbpedia.org/resource/R_(programming_language)"/>
         <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RStudio</hasName>
     </owl:NamedIndividual>
     
@@ -1627,36 +1518,6 @@
     <!-- http://dbpedia.org/resource/Sublime_Text -->
 
     <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Sublime_Text">
-        <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Editor"/>
-        <support rdf:resource="http://dbpedia.org/resource/Cascading_Style_Sheets"/>
-        <support rdf:resource="http://dbpedia.org/resource/Clojure"/>
-        <support rdf:resource="http://dbpedia.org/resource/Fortran"/>
-        <support rdf:resource="http://dbpedia.org/resource/HTML5"/>
-        <support rdf:resource="http://dbpedia.org/resource/JavaScript"/>
-        <support rdf:resource="http://dbpedia.org/resource/MATLAB"/>
-        <support rdf:resource="http://dbpedia.org/resource/PHP"/>
-        <support rdf:resource="http://dbpedia.org/resource/Perl"/>
-        <support rdf:resource="http://dbpedia.org/resource/SQL"/>
-        <support rdf:resource="http://dbpedia.org/resource/Visual_Basic"/>
-        <support rdf:resource="http://dbpedia.org/resource/XML"/>
-        <support rdf:resource="http://dbpedia.org/resource/C++"/>
-        <support rdf:resource="http://dbpedia.org/resource/C_Sharp_(programming_language)"/>
-        <support rdf:resource="http://dbpedia.org/resource/D_(programming_language)"/>
-        <support rdf:resource="http://dbpedia.org/resource/Dart_(programming_language)"/>
-        <support rdf:resource="http://dbpedia.org/resource/Elixir_(programming_language)"/>
-        <support rdf:resource="http://dbpedia.org/resource/Go_(programming_language)"/>
-        <support rdf:resource="http://dbpedia.org/resource/Groovy_(programming_language)"/>
-        <support rdf:resource="http://dbpedia.org/resource/Haskell_(programming_language)"/>
-        <support rdf:resource="http://dbpedia.org/resource/Java_(programming_language)"/>
-        <support rdf:resource="http://dbpedia.org/resource/Julia_(programming_language)"/>
-        <support rdf:resource="http://dbpedia.org/resource/Less_(stylesheet_language)"/>
-        <support rdf:resource="http://dbpedia.org/resource/Lua_(programming_language)"/>
-        <support rdf:resource="http://dbpedia.org/resource/Python_(programming_language)"/>
-        <support rdf:resource="http://dbpedia.org/resource/R_(programming_language)"/>
-        <support rdf:resource="http://dbpedia.org/resource/Ruby_(programming_language)"/>
-        <support rdf:resource="http://dbpedia.org/resource/Rust_(programming_language)"/>
-        <support rdf:resource="http://dbpedia.org/resource/Sass_(stylesheet_language)"/>
-        <support rdf:resource="http://dbpedia.org/resource/Scala_(programming_language)"/>
         <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sublime_Text</hasName>
     </owl:NamedIndividual>
     
@@ -1804,10 +1665,6 @@
     <!-- http://dbpedia.org/resource/Xcode -->
 
     <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Xcode">
-        <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Editor"/>
-        <support rdf:resource="http://dbpedia.org/resource/Objective-C"/>
-        <support rdf:resource="http://dbpedia.org/resource/C_Sharp_(programming_language)"/>
-        <support rdf:resource="http://dbpedia.org/resource/Swift_(programming_language)"/>
         <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Xcode</hasName>
     </owl:NamedIndividual>
     
@@ -1844,32 +1701,6 @@
     <!-- http://dbpedia.org/resource/Atom_(text_editor) -->
 
     <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Atom_(text_editor)">
-        <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Editor"/>
-        <support rdf:resource="http://dbpedia.org/resource/Cascading_Style_Sheets"/>
-        <support rdf:resource="http://dbpedia.org/resource/Clojure"/>
-        <support rdf:resource="http://dbpedia.org/resource/Fortran"/>
-        <support rdf:resource="http://dbpedia.org/resource/HTML5"/>
-        <support rdf:resource="http://dbpedia.org/resource/JavaScript"/>
-        <support rdf:resource="http://dbpedia.org/resource/PHP"/>
-        <support rdf:resource="http://dbpedia.org/resource/Perl"/>
-        <support rdf:resource="http://dbpedia.org/resource/SQL"/>
-        <support rdf:resource="http://dbpedia.org/resource/XML"/>
-        <support rdf:resource="http://dbpedia.org/resource/C++"/>
-        <support rdf:resource="http://dbpedia.org/resource/C_Sharp_(programming_language)"/>
-        <support rdf:resource="http://dbpedia.org/resource/D_(programming_language)"/>
-        <support rdf:resource="http://dbpedia.org/resource/Dart_(programming_language)"/>
-        <support rdf:resource="http://dbpedia.org/resource/Elixir_(programming_language)"/>
-        <support rdf:resource="http://dbpedia.org/resource/Go_(programming_language)"/>
-        <support rdf:resource="http://dbpedia.org/resource/Haskell_(programming_language)"/>
-        <support rdf:resource="http://dbpedia.org/resource/Julia_(programming_language)"/>
-        <support rdf:resource="http://dbpedia.org/resource/Less_(stylesheet_language)"/>
-        <support rdf:resource="http://dbpedia.org/resource/Lua_(programming_language)"/>
-        <support rdf:resource="http://dbpedia.org/resource/Python_(programming_language)"/>
-        <support rdf:resource="http://dbpedia.org/resource/R_(programming_language)"/>
-        <support rdf:resource="http://dbpedia.org/resource/Ruby_(programming_language)"/>
-        <support rdf:resource="http://dbpedia.org/resource/Rust_(programming_language)"/>
-        <support rdf:resource="http://dbpedia.org/resource/Sass_(stylesheet_language)"/>
-        <support rdf:resource="http://dbpedia.org/resource/Scala_(programming_language)"/>
         <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">atom</hasName>
     </owl:NamedIndividual>
     
@@ -2015,12 +1846,6 @@
     <!-- http://dbpedia.org/resource/Eclipse_(software) -->
 
     <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Eclipse_(software)">
-        <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Editor"/>
-        <support rdf:resource="http://dbpedia.org/resource/HTML5"/>
-        <support rdf:resource="http://dbpedia.org/resource/JavaScript"/>
-        <support rdf:resource="http://dbpedia.org/resource/PHP"/>
-        <support rdf:resource="http://dbpedia.org/resource/C++"/>
-        <support rdf:resource="http://dbpedia.org/resource/Java_(programming_language)"/>
         <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">eclipse</hasName>
     </owl:NamedIndividual>
     
@@ -2257,35 +2082,6 @@
     <!-- http://dbpedia.org/resource/Notepad++ -->
 
     <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Notepad++">
-        <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Editor"/>
-        <support rdf:resource="http://dbpedia.org/resource/Cascading_Style_Sheets"/>
-        <support rdf:resource="http://dbpedia.org/resource/Clojure"/>
-        <support rdf:resource="http://dbpedia.org/resource/Fortran"/>
-        <support rdf:resource="http://dbpedia.org/resource/HTML5"/>
-        <support rdf:resource="http://dbpedia.org/resource/JavaScript"/>
-        <support rdf:resource="http://dbpedia.org/resource/Objective-C"/>
-        <support rdf:resource="http://dbpedia.org/resource/PHP"/>
-        <support rdf:resource="http://dbpedia.org/resource/Perl"/>
-        <support rdf:resource="http://dbpedia.org/resource/SQL"/>
-        <support rdf:resource="http://dbpedia.org/resource/Visual_Basic"/>
-        <support rdf:resource="http://dbpedia.org/resource/XML"/>
-        <support rdf:resource="http://dbpedia.org/resource/C++"/>
-        <support rdf:resource="http://dbpedia.org/resource/C_Sharp_(programming_language)"/>
-        <support rdf:resource="http://dbpedia.org/resource/D_(programming_language)"/>
-        <support rdf:resource="http://dbpedia.org/resource/Dart_(programming_language)"/>
-        <support rdf:resource="http://dbpedia.org/resource/Elixir_(programming_language)"/>
-        <support rdf:resource="http://dbpedia.org/resource/Go_(programming_language)"/>
-        <support rdf:resource="http://dbpedia.org/resource/Groovy_(programming_language)"/>
-        <support rdf:resource="http://dbpedia.org/resource/Haskell_(programming_language)"/>
-        <support rdf:resource="http://dbpedia.org/resource/Julia_(programming_language)"/>
-        <support rdf:resource="http://dbpedia.org/resource/Less_(stylesheet_language)"/>
-        <support rdf:resource="http://dbpedia.org/resource/Lua_(programming_language)"/>
-        <support rdf:resource="http://dbpedia.org/resource/Python_(programming_language)"/>
-        <support rdf:resource="http://dbpedia.org/resource/R_(programming_language)"/>
-        <support rdf:resource="http://dbpedia.org/resource/Ruby_(programming_language)"/>
-        <support rdf:resource="http://dbpedia.org/resource/Rust_(programming_language)"/>
-        <support rdf:resource="http://dbpedia.org/resource/Sass_(stylesheet_language)"/>
-        <support rdf:resource="http://dbpedia.org/resource/Scala_(programming_language)"/>
         <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Notepad++</hasName>
     </owl:NamedIndividual>
     
@@ -2486,39 +2282,6 @@
     <!-- http://dbpedia.org/resource/Vim_(text_editor) -->
 
     <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Vim_(text_editor)">
-        <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Editor"/>
-        <support rdf:resource="http://dbpedia.org/resource/Cascading_Style_Sheets"/>
-        <support rdf:resource="http://dbpedia.org/resource/Clojure"/>
-        <support rdf:resource="http://dbpedia.org/resource/Fortran"/>
-        <support rdf:resource="http://dbpedia.org/resource/HTML5"/>
-        <support rdf:resource="http://dbpedia.org/resource/JavaScript"/>
-        <support rdf:resource="http://dbpedia.org/resource/MATLAB"/>
-        <support rdf:resource="http://dbpedia.org/resource/Objective-C"/>
-        <support rdf:resource="http://dbpedia.org/resource/PHP"/>
-        <support rdf:resource="http://dbpedia.org/resource/Perl"/>
-        <support rdf:resource="http://dbpedia.org/resource/SQL"/>
-        <support rdf:resource="http://dbpedia.org/resource/Visual_Basic"/>
-        <support rdf:resource="http://dbpedia.org/resource/XML"/>
-        <support rdf:resource="http://dbpedia.org/resource/C++"/>
-        <support rdf:resource="http://dbpedia.org/resource/C_Sharp_(programming_language)"/>
-        <support rdf:resource="http://dbpedia.org/resource/D_(programming_language)"/>
-        <support rdf:resource="http://dbpedia.org/resource/Dart_(programming_language)"/>
-        <support rdf:resource="http://dbpedia.org/resource/Elixir_(programming_language)"/>
-        <support rdf:resource="http://dbpedia.org/resource/Go_(programming_language)"/>
-        <support rdf:resource="http://dbpedia.org/resource/Groovy_(programming_language)"/>
-        <support rdf:resource="http://dbpedia.org/resource/Haskell_(programming_language)"/>
-        <support rdf:resource="http://dbpedia.org/resource/Java_(programming_language)"/>
-        <support rdf:resource="http://dbpedia.org/resource/Julia_(programming_language)"/>
-        <support rdf:resource="http://dbpedia.org/resource/Kotlin_(programming_language)"/>
-        <support rdf:resource="http://dbpedia.org/resource/Less_(stylesheet_language)"/>
-        <support rdf:resource="http://dbpedia.org/resource/Lua_(programming_language)"/>
-        <support rdf:resource="http://dbpedia.org/resource/Python_(programming_language)"/>
-        <support rdf:resource="http://dbpedia.org/resource/R_(programming_language)"/>
-        <support rdf:resource="http://dbpedia.org/resource/Ruby_(programming_language)"/>
-        <support rdf:resource="http://dbpedia.org/resource/Rust_(programming_language)"/>
-        <support rdf:resource="http://dbpedia.org/resource/Sass_(stylesheet_language)"/>
-        <support rdf:resource="http://dbpedia.org/resource/Scala_(programming_language)"/>
-        <support rdf:resource="http://dbpedia.org/resource/Swift_(programming_language)"/>
         <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vim</hasName>
     </owl:NamedIndividual>
     
@@ -2548,16 +2311,6 @@
             <rdf:Description rdf:about="http://www.semanticweb.org/pocketdev#Coding"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/pocketdev#Deploy"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/pocketdev#Design"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/pocketdev#Security"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/pocketdev#Versioning"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://www.semanticweb.org/pocketdev#Coding"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/pocketdev#Deploy"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/pocketdev#Editor"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/pocketdev#Security"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/pocketdev#Versioning"/>
         </owl:members>
