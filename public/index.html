@@ -14,7 +14,7 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <meta name="msapplication-config" content="browserconfig.xml">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css" rel="stylesheet">
-  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css'>
+  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/solid.min.css'>
   <link rel="stylesheet" href="./index.css">
   <script type="module" src="./index.js"></script>
 </head>
@@ -43,29 +43,29 @@
           <ul class="menu-list">
             <li>Base
               <ul class="menu-list" data-bind="foreach: baseTheory">
-                <li><a data-bind="text: $data.replace('http://dbpedia.org/resource/', '')" href="#"></a></li>
+                <li><a data-bind="text: $data.replace('http://dbpedia.org/resource/', ''), click: function(){ $parent.retrieveInfo($data)}" href="#"></a></li>
               </ul>
             </li>
             <li>Intermediate
               <ul class="menu-list" data-bind="foreach: intermediateTheory">
-                <li><a data-bind="text: $data.replace('http://dbpedia.org/resource/', '')" href="#"></a></li>
+                <li><a data-bind="text: $data.replace('http://dbpedia.org/resource/', ''), click: function(){ $parent.retrieveInfo($data)}" href="#"></a></li>
               </ul>
             </li>
             <li>Advanced
               <ul class="menu-list" data-bind="foreach: advancedTheory">
-                <li><a data-bind="text: $data.replace('http://dbpedia.org/resource/', '')" href="#"></a></li>
+                <li><a data-bind="text: $data.replace('http://dbpedia.org/resource/', ''), click: function(){ $parent.retrieveInfo($data)}" href="#"></a></li>
               </ul>
             </li>
           </ul>
           <p class="menu-label">Practice Educational Path</p>
           <ul class="menu-list" data-bind="foreach: praticalPath">
-            <li><a data-bind="text: $data"></a></li>
+            <li><a data-bind="text: $data.replace('http://dbpedia.org/resource/', ''), click: function(){ $parent.retrieveInfo($data)}"></a></li>
           </ul>
         </aside>
       </div>
     </section>
     <section class="tile is-parent">
-      <article class="tile is-child box">
+      <article class="tile is-child box wrapper">
         <div class="tabs is-centered">
           <ul>
             <li data-bind="css: {'is-active': tab() === 0}"><a data-bind="click: changeTab.bind($data, 0)">Info</a></li>
@@ -73,9 +73,24 @@
             <li data-bind="css: {'is-active': tab() === 2}"><a data-bind="click: changeTab.bind($data, 2)">Guide</a></li>
           </ul>
         </div>
-        <div data-bind="visible: tab() === 0">primo</div>
-        <div data-bind="visible: tab() === 1">secondo</div>
-        <div data-bind="visible: tab() === 2">terzo</div>
+        <div data-bind="visible: tab() === 0, text: info" class="content">
+          <p data-bind="ifnot: info"></p>
+        </div>
+        <div data-bind="visible: tab() === 1, foreach: books">
+          <article class="media">
+            <figure class="media-left">
+              <p class="image is-128x128">
+                <img data-bind="attr: { src: source }"/>
+              </p>
+            </figure>
+            <div class="media-content">
+              <div class="content">
+                <p data-bind="text: alternative"></p>
+              </div>
+            </div>
+          </article>
+        </div>
+        <div data-bind="visible: tab() === 2, guide: parsedGuide" class="content"></div>
       </article>
     </section>
   </main>

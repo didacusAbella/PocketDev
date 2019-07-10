@@ -3,6 +3,19 @@ import ko from "https://dev.jspm.io/knockout";
 const ENDPOINT_HOST = "localhost";
 const ENDPOINT_PORT = 3000;
 const FULL_ENDPOINT = `http://${ENDPOINT_HOST}:${ENDPOINT_PORT}`;
+const Parser = new DOMParser();
+const sd = "https://www.tutorialspoint.com";
+
+ko.bindingHandlers.guide = {
+  init: function(element, valueAccessor, allBindings, viewModel, bindingContext) {
+    const elements = ko.unwrap(valueAccessor());
+    elements.forEach(value => element.appendChild(value));
+  },
+  update: function(element, valueAccessor, allBindings, viewModel, bindingContext) {
+    const elements = ko.unwrap(valueAccessor());
+    elements.forEach(value => element.appendChild(value));
+  }
+};
 
 /**
  * Return json format of the response 
@@ -33,6 +46,44 @@ function reducePaths(accumulator, element) {
   return accumulator;
 }
 
+/**
+ * Scrape the guide and add formatting
+ * @param {Element} element 
+ * @param {String} selector 
+ */
+function nextUntil(element, selector){
+  const siblings = [];
+  let elem = element.nextElementSibling;
+  while(!elem.matches(selector)){
+    elem.className="";
+    switch(elem.tagName) {
+      case "H1": case "H2": case "H3": case "H4": case "H5": case "H6":
+        elem.className="subtitle";
+        siblings.push(elem);
+        elem = elem.nextElementSibling;
+        break;
+      case "A":
+        siblings.push(elem);
+        elem = elem.nextElementSibling;
+        break;
+      case "TABLE":
+        elem.className="table is-striped";
+        siblings.push(elem);
+        elem = elem.nextElementSibling;
+        break;
+      case "IMG":
+        elem.setAttribute("src", `${sd}/${elem.getAttribute("src")}`);
+        siblings.push(elem);
+        elem = elem.nextElementSibling;
+        break;
+      default:
+        siblings.push(elem);
+        elem = elem.nextElementSibling;
+    }
+  }
+  return siblings;
+}
+
 class PocketViewModel {
 
   constructor(careers) {
@@ -42,26 +93,60 @@ class PocketViewModel {
     this.intermediateTheory = ko.observableArray(new Array());
     this.advancedTheory = ko.observableArray(new Array());
     this.praticalPath = ko.observableArray(new Array());
-    this.tab = ko.observable(0)
+    this.tab = ko.observable(0);
+    this.books = ko.observableArray([]);
+    this.parsedGuide = ko.observable([]);
+    this.info = ko.observable("No Description Available");
     this.fetchPath();
+    this.fetchPratical();
   }
 
   changeTab(id) {
     this.tab(id);
   }
 
-  fetchPath() {
-    fetch(`${FULL_ENDPOINT}/path/theory/${this.career()}`)
-    .then(toJson)
-    .then(elements => elements.reduce(reducePaths, {"Advanced": [], "Intermediate": [], "Base": []}))
-    .then(theoryPath => {
-      this.baseTheory(theoryPath["Base"]);
-      this.intermediateTheory(theoryPath["Intermediate"]);
-      this.advancedTheory(theoryPath["Advanced"]);
-    });
+  async retrieveInfo(path) {
+    const datas = await fetch(`${FULL_ENDPOINT}/path/info`, 
+    { 
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ name: path })
+    }).then(toJson);
+    this.info(datas[0].abs.value);
+    this.scrapeGuide(datas[0].guide.value);
+    this.scrapeBooks(datas[0].book.value);
+  }
+
+  async fetchPath() {
+    const jsonResponse = await fetch(`${FULL_ENDPOINT}/path/theory/${this.career()}`).then(toJson);
+    const theoryPath = jsonResponse.reduce(reducePaths, {"Advanced": [], "Intermediate": [], "Base": []});
+    this.baseTheory(theoryPath["Base"]);
+    this.intermediateTheory(theoryPath["Intermediate"]);
+    this.advancedTheory(theoryPath["Advanced"]);
+    this.fetchPratical();
+  }
+
+  async fetchPratical() {
+    const jsonResponse = await fetch(`${FULL_ENDPOINT}/path/practice/${this.career()}`).then(toJson);
+    jsonResponse.forEach(el => this.praticalPath.push(el.adv.value));
+  }
+
+  async scrapeBooks(fromUrl){
+   const textResponse = await fetch(fromUrl).then(response => response.text());
+   const list = Parser.parseFromString(textResponse, "text/html").querySelectorAll("#books img");
+   list.forEach(img => this.books.push({source: img.getAttribute("src"), alternative: img.getAttribute("alt")}));
+  }
+  
+  async scrapeGuide(fromUrl) {
+    const textResponse = await fetch(fromUrl).then(response => response.text());
+    const baseElement = Parser.parseFromString(textResponse, "text/html").querySelector("div.col-md-7.middle-col>h1:nth-of-type(2)");
+    const elements = nextUntil(baseElement, ".pre-btn");
+    this.parsedGuide(elements);
   }
 }
-
 
 fetch(`${FULL_ENDPOINT}/career/`)
 .then(toJson).then(toCareers)

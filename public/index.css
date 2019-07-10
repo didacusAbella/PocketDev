@@ -1,3 +1,13 @@
 #root {
   margin: 10px 10px 10px 10px;
 }
+
+.wrapper {
+  overflow: scroll;
+  height: 800px;
+}
+
+.has-image-centered {
+  margin-left: auto;
+  margin-right: auto;
+}
