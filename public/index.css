@@ -3,11 +3,15 @@
 }
 
 .wrapper {
-  overflow: scroll;
+  overflow-y: scroll;
   height: 800px;
 }
 
 .has-image-centered {
   margin-left: auto;
   margin-right: auto;
+}
+
+iframe {
+  border: 1px dashed black;
 }

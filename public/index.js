@@ -1,10 +1,7 @@
-import ko from "https://dev.jspm.io/knockout";
-
 const ENDPOINT_HOST = "localhost";
 const ENDPOINT_PORT = 3000;
 const FULL_ENDPOINT = `http://${ENDPOINT_HOST}:${ENDPOINT_PORT}`;
 const Parser = new DOMParser();
-const sd = "https://www.tutorialspoint.com";
 
 ko.bindingHandlers.guide = {
   init: function(element, valueAccessor, allBindings, viewModel, bindingContext) {
@@ -30,12 +27,12 @@ function toCareers(response) {
 }
 
 /**
- * add a new element and not add dupicate if yet exists
+ * add a new element and not add duplicate if yet exists
  * @param {Array<Object>} list array
  * @param {Object} element an object
  */
 function add(list, element) {
-  if(list.includes(element) === false)
+  if(list.indexOf(element) === -1)
     list.push(element);
 }
 
@@ -46,6 +43,12 @@ function reducePaths(accumulator, element) {
   return accumulator;
 }
 
+function reducePractice(accumulator, element) {
+  for(key in element) {
+    add(accumulator, element[key].value);
+  }
+  return accumulator;
+}
 /**
  * Scrape the guide and add formatting
  * @param {Element} element 
@@ -53,33 +56,13 @@ function reducePaths(accumulator, element) {
  */
 function nextUntil(element, selector){
   const siblings = [];
+  siblings.push(element);//first element
   let elem = element.nextElementSibling;
   while(!elem.matches(selector)){
     elem.className="";
-    switch(elem.tagName) {
-      case "H1": case "H2": case "H3": case "H4": case "H5": case "H6":
-        elem.className="subtitle";
-        siblings.push(elem);
-        elem = elem.nextElementSibling;
-        break;
-      case "A":
-        siblings.push(elem);
-        elem = elem.nextElementSibling;
-        break;
-      case "TABLE":
-        elem.className="table is-striped";
-        siblings.push(elem);
-        elem = elem.nextElementSibling;
-        break;
-      case "IMG":
-        elem.setAttribute("src", `${sd}/${elem.getAttribute("src")}`);
-        siblings.push(elem);
-        elem = elem.nextElementSibling;
-        break;
-      default:
-        siblings.push(elem);
-        elem = elem.nextElementSibling;
-    }
+    Visitor[elem.tagName](elem);
+    siblings.push(elem);
+    elem = elem.nextElementSibling;
   }
   return siblings;
 }
@@ -131,7 +114,9 @@ class PocketViewModel {
 
   async fetchPratical() {
     const jsonResponse = await fetch(`${FULL_ENDPOINT}/path/practice/${this.career()}`).then(toJson);
-    jsonResponse.forEach(el => this.praticalPath.push(el.adv.value));
+    const practicePath = jsonResponse.reduce(reducePractice, []);
+    this.praticalPath(practicePath);
+    //jsonResponse.forEach(el => add(this.praticalPath, el.adv.value));
   }
 
   async scrapeBooks(fromUrl){

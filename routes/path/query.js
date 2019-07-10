@@ -23,14 +23,14 @@ function getTheoryEducationalPathByCareer(name){
 
 function getPracticeEducationalPathByCareer(name){
     return `
-    SELECT ?adv ?type ?lib ?tool ?lang WHERE {
+    SELECT ?adv ?lib ?tool ?lang WHERE {
         ?carrer a pd:IT_Career ;
                 pd:hasName "${name}";
                 pd:follow ?adv.
         ?adv rdf:type ?type.
         ?type rdfs:subClassOf* pd:Practice_EducationalPath.
-        OPTIONAL {?type pd:generate ?lib}
-        OPTIONAL {?type pd:usedWith ?tool}
+        OPTIONAL {?adv pd:generate ?lib}
+        OPTIONAL {?adv pd:usedWith ?tool}
       }
     `
 }
