@@ -608,15 +608,6 @@
     
 
 
-    <!-- http://dbpedia.org/resource/Data_janitor -->
-
-    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Data_janitor">
-        <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#IT_Career"/>
-        <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">data_janitor</hasName>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://dbpedia.org/resource/Data_structure -->
 
     <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Data_structure">
@@ -1616,6 +1607,20 @@
     <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Visual_Paradigm_for_UML">
         <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#Design"/>
         <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Visual_Paradigm</hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Web_developer -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Web_developer">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#IT_Career"/>
+        <follow rdf:resource="http://dbpedia.org/resource/Agile_software_development"/>
+        <follow rdf:resource="http://dbpedia.org/resource/Cascading_Style_Sheets"/>
+        <follow rdf:resource="http://dbpedia.org/resource/Git"/>
+        <follow rdf:resource="http://dbpedia.org/resource/HTML5"/>
+        <follow rdf:resource="http://dbpedia.org/resource/JavaScript"/>
+        <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">web_developer</hasName>
     </owl:NamedIndividual>
     
 
