@@ -75,10 +75,13 @@
             <li data-bind="css: {'is-active': tab() === 2}"><a data-bind="click: changeTab.bind($data, 2)">Guide</a></li>
           </ul>
         </div>
-        <div data-bind="visible: tab() === 0, text: info" class="content">
-          <p data-bind="ifnot: info"></p>
+        <div data-bind="visible: tab() === 0" class="content">
+          <h1 class="subtitle">General Description</h1>
+          <p data-bind="text: info"></p>
         </div>
-        <div data-bind="visible: tab() === 1, foreach: books">
+        <div data-bind="visible: tab() === 1">
+          <p data-bind="if: books.length === 0">There aren't books for this Path</p>
+          <section data-bind="foreach: books">
           <article class="media">
             <figure class="media-left">
               <p class="image is-128x128">
@@ -91,8 +94,11 @@
               </div>
             </div>
           </article>
+        </section>
         </div>
-        <div data-bind="visible: tab() === 2, guide: parsedGuide" class="content"></div>
+        <div data-bind="visible: tab() === 2, guide: parsedGuide" class="content">
+          <p data-bind="if: parsedGuide().length === 0">There isn't a Guide for this Path</p>
+        </div>
       </article>
     </section>
   </main>

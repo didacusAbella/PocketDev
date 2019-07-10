@@ -99,8 +99,16 @@ class PocketViewModel {
       body: JSON.stringify({ name: path })
     }).then(toJson);
     this.info(datas[0].abs.value);
-    this.scrapeGuide(datas[0].guide.value);
-    this.scrapeBooks(datas[0].book.value);
+    if(datas[0].guide){
+      this.scrapeGuide(datas[0].guide.value);
+    } else {
+      this.parsedGuide([]);
+    }
+    if(datas[0].book) {
+      this.scrapeBooks(datas[0].book.value);
+    } else {
+      this.books([]);
+    }
   }
 
   async fetchPath() {
