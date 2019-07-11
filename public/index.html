@@ -80,7 +80,7 @@
           <p data-bind="text: info"></p>
         </div>
         <div data-bind="visible: tab() === 1">
-          <p data-bind="if: books.length === 0">There aren't books for this Path</p>
+          <p data-bind="if: books().length === 0">There aren't books for this Path</p>
           <section data-bind="foreach: books">
           <article class="media">
             <figure class="media-left">

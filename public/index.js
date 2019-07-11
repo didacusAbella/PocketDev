@@ -9,6 +9,9 @@ ko.bindingHandlers.guide = {
     elements.forEach(value => element.appendChild(value));
   },
   update: function(element, valueAccessor, allBindings, viewModel, bindingContext) {
+    while(element.hasChildNodes()) {
+      element.removeChild(element.lastChild);
+    }
     const elements = ko.unwrap(valueAccessor());
     elements.forEach(value => element.appendChild(value));
   }
@@ -60,6 +63,7 @@ function nextUntil(element, selector){
   let elem = element.nextElementSibling;
   while(!elem.matches(selector)){
     elem.className="";
+    //console.log(elem.tagName);
     Visitor[elem.tagName](elem);
     siblings.push(elem);
     elem = elem.nextElementSibling;
@@ -72,13 +76,13 @@ class PocketViewModel {
   constructor(careers) {
     this.careers = ko.observableArray(careers);
     this.career = ko.observable(this.careers()[0]);
-    this.baseTheory = ko.observableArray(new Array());
-    this.intermediateTheory = ko.observableArray(new Array());
-    this.advancedTheory = ko.observableArray(new Array());
-    this.praticalPath = ko.observableArray(new Array());
+    this.baseTheory = ko.observableArray();
+    this.intermediateTheory = ko.observableArray();
+    this.advancedTheory = ko.observableArray();
+    this.praticalPath = ko.observableArray();
     this.tab = ko.observable(0);
-    this.books = ko.observableArray([]);
-    this.parsedGuide = ko.observable([]);
+    this.books = ko.observableArray();
+    this.parsedGuide = ko.observableArray();
     this.info = ko.observable("No Description Available");
     this.fetchPath();
     this.fetchPratical();
@@ -124,16 +128,17 @@ class PocketViewModel {
     const jsonResponse = await fetch(`${FULL_ENDPOINT}/path/practice/${this.career()}`).then(toJson);
     const practicePath = jsonResponse.reduce(reducePractice, []);
     this.praticalPath(practicePath);
-    //jsonResponse.forEach(el => add(this.praticalPath, el.adv.value));
   }
 
   async scrapeBooks(fromUrl){
+   this.books.removeAll();
    const textResponse = await fetch(fromUrl).then(response => response.text());
    const list = Parser.parseFromString(textResponse, "text/html").querySelectorAll("#books img");
    list.forEach(img => this.books.push({source: img.getAttribute("src"), alternative: img.getAttribute("alt")}));
   }
   
   async scrapeGuide(fromUrl) {
+    this.parsedGuide.removeAll();
     const textResponse = await fetch(fromUrl).then(response => response.text());
     const baseElement = Parser.parseFromString(textResponse, "text/html").querySelector("div.col-md-7.middle-col>h1:nth-of-type(2)");
     const elements = nextUntil(baseElement, ".pre-btn");

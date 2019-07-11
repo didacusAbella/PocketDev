@@ -17,6 +17,7 @@ const Visitor = {
   "BUTTON": function visit(buttonElement) { return buttonElement; },
   "CANVAS": function visit(canvasElement) { return canvasElement; },
   "CAPTION": function visit(captionElement) { return captionElement; },
+  "CENTER": function(centerElement) { return centerElement; },
   "CITE": function visit(citeElement) { return citeElement; },
   "CODE": function visit(codeElement) { return codeElement; },
   "COL": function visit(colElement) { return colElement; },
