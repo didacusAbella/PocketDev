@@ -140,8 +140,19 @@ class PocketViewModel {
   async scrapeGuide(fromUrl) {
     this.parsedGuide.removeAll();
     const textResponse = await fetch(fromUrl).then(response => response.text());
-    const baseElement = Parser.parseFromString(textResponse, "text/html").querySelector("div.col-md-7.middle-col>h1:nth-of-type(2)");
-    const elements = nextUntil(baseElement, ".pre-btn");
+    const doc = Parser.parseFromString(textResponse, "text/html");
+    let baseElement = null;
+    let nextCondition = "";
+    const oldVersion = doc.querySelector("div.col-md-7.middle-col>h1:nth-of-type(2)");
+    if(oldVersion == null) {
+      //now we need new version scraping
+      baseElement = doc.querySelector("div.mui-col-md-6.tutorial-content>h1:nth-of-type(2)");
+      nextCondition = ".mui-container-fluid.button-borders";
+    } else {
+      baseElement = oldVersion;
+      nextCondition = ".pre-btn";
+    }
+    const elements = nextUntil(baseElement, nextCondition);
     this.parsedGuide(elements);
   }
 }

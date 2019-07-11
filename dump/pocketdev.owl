@@ -777,6 +777,21 @@
     
 
 
+    <!-- http://dbpedia.org/resource/Game_programmer -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Game_programmer">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#IT_Career"/>
+        <follow rdf:resource="http://dbpedia.org/resource/Apache_Subversion"/>
+        <follow rdf:resource="http://dbpedia.org/resource/Functional_programming"/>
+        <follow rdf:resource="http://dbpedia.org/resource/Git"/>
+        <follow rdf:resource="http://dbpedia.org/resource/C++"/>
+        <follow rdf:resource="http://dbpedia.org/resource/C_Sharp_(programming_language)"/>
+        <follow rdf:resource="http://dbpedia.org/resource/D_(programming_language)"/>
+        <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">game_programmer</hasName>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://dbpedia.org/resource/Git -->
 
     <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Git">
@@ -806,6 +821,22 @@
         <hasBook rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/html/html_useful_resources.htm</hasBook>
         <hasGuide rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.tutorialspoint.com/html/html_quick_guide.htm</hasGuide>
         <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HTML5</hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Hobbyist_operating_system_development -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Hobbyist_operating_system_development">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#IT_Career"/>
+        <follow rdf:resource="http://dbpedia.org/resource/BitKeeper"/>
+        <follow rdf:resource="http://dbpedia.org/resource/Concurrent_Versions_System"/>
+        <follow rdf:resource="http://dbpedia.org/resource/Git"/>
+        <follow rdf:resource="http://dbpedia.org/resource/Model_checking"/>
+        <follow rdf:resource="http://dbpedia.org/resource/C++"/>
+        <follow rdf:resource="http://dbpedia.org/resource/D_(programming_language)"/>
+        <follow rdf:resource="http://dbpedia.org/resource/Rust_(programming_language)"/>
+        <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hobbyist_operating_system_development</hasName>
     </owl:NamedIndividual>
     
 
@@ -1010,6 +1041,21 @@
 
     <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Microsoft_Visual_Studio">
         <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Microsoft_Visual_Studio</hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://dbpedia.org/resource/Mobile_application_development -->
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Mobile_application_development">
+        <rdf:type rdf:resource="http://www.semanticweb.org/pocketdev#IT_Career"/>
+        <follow rdf:resource="http://dbpedia.org/resource/Functional_programming"/>
+        <follow rdf:resource="http://dbpedia.org/resource/Objective-C"/>
+        <follow rdf:resource="http://dbpedia.org/resource/Visual_Paradigm_for_UML"/>
+        <follow rdf:resource="http://dbpedia.org/resource/XML"/>
+        <follow rdf:resource="http://dbpedia.org/resource/Kotlin_(programming_language)"/>
+        <follow rdf:resource="http://dbpedia.org/resource/Swift_(programming_language)"/>
+        <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mobile_application_development</hasName>
     </owl:NamedIndividual>
     
 
